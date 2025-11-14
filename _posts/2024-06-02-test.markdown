@@ -1,8 +1,11 @@
----
-layout: post  
-title: "Economic Statistics System (ECOS) Project"  
-date:   2022-06-30 00:00:00 +0900  
-categories: [ECOS, Bank of Korea, Data Engineering, System Development]  
+layout: post
+title: "Economic Statistics System (ECOS) Project"
+date: 2022-06-30 00:00:00 +0900
+categories: [AI-dev-history]
+tags: [ECOS, Bank of Korea, Data Engineering, System Development]
+excerpt: >
+  경제통계시스템(ECOS) 구축 프로젝트에서 데이터 플랫폼 전환과 클러스터 운영을 비롯한
+  전반적 AI·데이터 엔지니어링 리더십을 수행한 사례입니다.
 ---
 
 ## 1. Project Overview  

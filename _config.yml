@@ -31,6 +31,10 @@ github_username: kgy0617
 theme: minima
 plugins:
   - jekyll-feed
+header_pages:
+  - ai-dev.md
+  - ai-review.md
+  - about.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
