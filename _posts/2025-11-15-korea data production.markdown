@@ -167,13 +167,13 @@ Main Findings
 
 # 10. Integrated Insights
 
-Together, the two components provide a holistic view of Korea’s digital economy:
-Data Production Value : Quantifies the economic value of data activities at the national level.
-Data-Intensity in Occupations : Measures how data work is embedded in the labor market.
+- Together, the two components provide a holistic view of Korea’s digital economy
+- Data Production Value : Quantifies the economic value of data activities at the national level.
+- Data-Intensity in Occupations : Measures how data work is embedded in the labor market.
 
 Combined Benefits
- - Stronger statistical basis for digital economy policy
- - Better understanding of industry-level differences
- - Evidence for investment in data infrastructure and skills
- - Alignment with international statistical standards
+- Stronger statistical basis for digital economy policy
+- Better understanding of industry-level differences
+- Evidence for investment in data infrastructure and skills
+- Alignment with international statistical standards
 
