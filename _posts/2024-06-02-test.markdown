@@ -18,6 +18,7 @@ categories: [ECOS, Bank of Korea, Data Engineering, System Development]
     - External Network: https://ecos.bok.or.kr/#/ (public-facing portal)  
 - Search and API Utilization: ECOS Open API for supplying economic statistics  
 - Additional Technical Components: Kubernetes-based deployment and operational environment  
+![alt text](/assets/images/ecos.png)
 
 ## 3. Key Achievements  
 1. Data Infrastructure Development and Transition  
