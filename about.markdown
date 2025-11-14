@@ -21,5 +21,4 @@ I am a data and AI engineer at the Bank of Korea. My work focuses on building st
 - Data engineering and distributed systems
 - Digital economy statistics and data valuation
 
-## Contact
-You can reach me at: kgy1982@gmail.com
+
