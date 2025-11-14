@@ -122,7 +122,7 @@ To adapt the methodology to Korean labor market conditions, we:
 ---
 
 # 7. Processing Pipeline
-![alt text](image.png)
+![alt text](/assets/images/image.png)
 
 
 # 8. LLM Enhancements Beyond the OECD Method
@@ -143,6 +143,7 @@ Capabilities
 
 
 # 9. Performance Comparison: NLP vs. LLM Models
+<pre>
 Model          Prompt   Accuracy Precision Recall F1-Score ROC-AUC
 NLP Baseline   -        0.9138   0.4013    0.4217 0.4112   0.6867
 GPT-3.5-ZS     Zero     0.9106   0.3937    0.4685 0.4279   0.7065
@@ -155,7 +156,7 @@ Gemma-27B-ZS   Zero     0.8269   0.2188    0.5542 0.3138   0.7011
 Gemma-27B-FS   Few-shot 0.8878   0.3339    0.5743 0.4222   0.7431
 Qwen3-30B-ZS   Zero     0.9166   0.3925    0.3079 0.3451   0.6356
 Qwen3-30B-FS   Few-shot 0.9359   0.6000    0.3052 0.4046   0.6448
-
+</pre>
 
 Main Findings
 	•	GPT-4o Few-shot provides the best overall performance
