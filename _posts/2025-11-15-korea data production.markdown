@@ -19,7 +19,7 @@ Both are foundational to building modern digital economy statistics aligned with
 # 1. Data as a Production Factor
 
 Data generation, management, and analysis have become core drivers of productivity across industries.  
-International organizations highlight the rapid rise of data-intensive occupations:
+International organizations highlight the rapid rise of data-intensive occupations
 
 - OECD: Data work is increasingly embedded in job tasks  
 - IMF: Digital capital and data-related activities fuel productivity  
@@ -109,9 +109,9 @@ Uses dictionary- and rule-based text matching to detect data-related tasks.
 
 # 6. Developing a Korea-Specific Framework
 
-To adapt the methodology to Korean labor market conditions, we:
+To adapt the methodology to Korean labor market conditions
 
-## 6.1 Localization Steps
+## Localization Steps
 - Built a large-scale Korean job-posting dataset  
 - Applied Korean morphological analysis
 - Incorporated Korean-specific terminology  
