@@ -1,30 +1,48 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2024-06-02 13:15:55 +0900
-categories: jekyll update
+title: "News Sentiment Index: Migration from Oracle Batch Processing to Spark-based In-Memory Pipeline"
+date: 2024-12-30 00:00:00 +0900
+categories: [NLP, Spark, Sentiment-Index, Data-Engineering]
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+## 1. Overview
+To develop the News Sentiment Index (NSI), the traditional workflow relied on Oracle-based batch processing to handle large-scale news datasets. As data volume and update frequency increased, the Oracle batch approach reached its performance and scalability limits. To address these issues, I redesigned the processing pipeline using Apache Spark to enable distributed, in-memory computation.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+## 2. Background
+- Previous workflow: Oracle stored procedures and batch jobs for large news text files  
+- Challenges:
+  - Slow I/O-bound processing  
+  - High latency for iterative NLP tasks  
+  - Limited scalability with growing data volume  
+- Requirement: A high-performance pipeline capable of processing millions of text records for sentiment scoring, topic extraction, and daily updates
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+## 3. Spark-based In-Memory Processing Pipeline
+### Key Improvements
+1. Adoption of Apache Spark for distributed, in-memory data processing  
+2. Replacement of Oracle-based ETL with Spark DataFrame operations  
+3. Integration with Python NLP modules for feature extraction and sentiment scoring  
+4. Parallelization of tokenization, vectorization, and model inference tasks  
+5. Support for incremental ingestion of new news articles
 
-Jekyll also offers powerful support for code snippets:
+### Architecture Summary
+- Input Source: Large-scale raw news text files (daily ingestion)  
+- Processing Engine: Spark cluster (in-memory execution)  
+- NLP Layer: Python-based sentiment analysis and feature engineering  
+- Output Target: Structured sentiment index dataset for downstream analysis and visualization  
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
+## 4. Performance Gains
+- Significant reduction in processing time (batch → near real-time capability)  
+- Improved scalability for multi-day or multi-year news archives  
+- Efficient handling of large files (GB-TB scale) without Oracle I/O bottlenecks  
+- Better resource utilization through distributed memory execution  
 
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+## 5. Impact on the News Sentiment Index (NSI)
+- Enabled timely sentiment updates required for economic indicators  
+- Improved consistency and accuracy of text-based metrics  
+- Provided a foundation for future enhancements such as:
+  - Transformer-based sentiment models  
+  - Topic clustering and anomaly detection  
+  - Real-time news monitoring  
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+## 6. Summary
+The migration from Oracle batch processing to a Spark-based in-memory pipeline transformed the performance and scalability of the News Sentiment Index development workflow. This architectural shift significantly improved processing efficiency and enabled more advanced NLP techniques to be integrated into the index calculation system.
