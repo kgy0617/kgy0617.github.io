@@ -130,16 +130,16 @@ To adapt the methodology to Korean labor market conditions, we:
 LLM-based classification overcomes many of the OECD method’s limitations.
 
 Capabilities
-	•	Contextual understanding of job tasks
-	•	Robustness to linguistic variation
-	•	Identification of emerging or unstructured roles
-	•	Generalization beyond fixed dictionaries
-	•	Confidence scoring
-	•	Evidence-based reasoning
-	•	Task-share estimation:
-	•	Input-level
-	•	Management-level
-	•	Analysis-level
+- Contextual understanding of job tasks
+- Robustness to linguistic variation
+- Identification of emerging or unstructured roles
+- Generalization beyond fixed dictionaries
+- Confidence scoring
+- Evidence-based reasoning
+- Task-share estimation:
+- Input-level
+- Management-level
+- Analysis-level
 
 
 # 9. Performance Comparison: NLP vs. LLM Models
@@ -156,31 +156,24 @@ Gemma-27B-ZS   Zero     0.8269   0.2188    0.5542 0.3138   0.7011
 Gemma-27B-FS   Few-shot 0.8878   0.3339    0.5743 0.4222   0.7431
 Qwen3-30B-ZS   Zero     0.9166   0.3925    0.3079 0.3451   0.6356
 Qwen3-30B-FS   Few-shot 0.9359   0.6000    0.3052 0.4046   0.6448
-
+</pre>
 
 Main Findings
-	•	GPT-4o Few-shot provides the best overall performance
-	•	Gemini Flash Lite Few-shot yields strong ROC-AUC, good for sensitivity-driven detection
-	•	LLM-based approaches significantly outperform dictionary-based baselines for Korean
+- GPT-4o Few-shot provides the best overall performance
+- Gemini Flash Lite Few-shot yields strong ROC-AUC, good for sensitivity-driven detection
+- LLM-based approaches significantly outperform dictionary-based baselines for Korean
 
 ⸻
 
 # 10. Integrated Insights
 
 Together, the two components provide a holistic view of Korea’s digital economy:
-
-Data Production Value
-
-→ Quantifies the economic value of data activities at the national level.
-
-Data-Intensity in Occupations
-
-→ Measures how data work is embedded in the labor market.
+Data Production Value : Quantifies the economic value of data activities at the national level.
+Data-Intensity in Occupations : Measures how data work is embedded in the labor market.
 
 Combined Benefits
-	•	Stronger statistical basis for digital economy policy
-	•	Better understanding of industry-level differences
-	•	Evidence for investment in data infrastructure and skills
-	•	Alignment with international statistical standards
+ - Stronger statistical basis for digital economy policy
+ - Better understanding of industry-level differences
+ - Evidence for investment in data infrastructure and skills
+ - Alignment with international statistical standards
 
-  </pre>
