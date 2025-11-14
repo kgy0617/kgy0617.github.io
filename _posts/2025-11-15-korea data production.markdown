@@ -156,7 +156,7 @@ Gemma-27B-ZS   Zero     0.8269   0.2188    0.5542 0.3138   0.7011
 Gemma-27B-FS   Few-shot 0.8878   0.3339    0.5743 0.4222   0.7431
 Qwen3-30B-ZS   Zero     0.9166   0.3925    0.3079 0.3451   0.6356
 Qwen3-30B-FS   Few-shot 0.9359   0.6000    0.3052 0.4046   0.6448
-</pre>
+
 
 Main Findings
 	•	GPT-4o Few-shot provides the best overall performance
@@ -182,3 +182,5 @@ Combined Benefits
 	•	Better understanding of industry-level differences
 	•	Evidence for investment in data infrastructure and skills
 	•	Alignment with international statistical standards
+
+  </pre>
