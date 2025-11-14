@@ -4,15 +4,22 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a data and AI engineer at the Bank of Korea. My work focuses on building statistical systems, developing language model applications for economic analysis, and designing large-scale data processing pipelines.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+## What I Do
+- Development and architecture design for the Economic Statistics System (ECOS)
+- Migration of statistical programs from STATA and SAS to Python
+- Backend development using Java, Oracle, and Python
+- Large-scale processing of economic text data using Spark
+- Deployment and operation of Kubernetes-based environments
+- Research on data production value and data-intensity measurement
+- Development of AI and LLM-based tools for economic and statistical analysis
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## Interests
+- Artificial intelligence for economics
+- Natural language processing
+- Data engineering and distributed systems
+- Digital economy statistics and data valuation
 
-
-[jekyll-organization]: https://github.com/jekyll
+## Contact
+You can reach me at: kgy1982@gmail.com
