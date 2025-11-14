@@ -1,4 +1,11 @@
 
+
+---
+layout: 
+title: 
+permalink: 
+---
+
 I am a data and AI engineer at the Bank of Korea. My work focuses on building statistical systems, developing language model applications for economic analysis, and designing large-scale data processing pipelines.
 
 ## What I Do
