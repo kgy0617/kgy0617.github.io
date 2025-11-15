@@ -12,10 +12,10 @@ permalink: /years/
 
 <table>
   <tr>
-    {% assign years = site.posts | map: "date" | uniq | sort: "date" %}
+  {% assign years = site.posts | map: 'date' | uniq | sort: 'date' %}
     {% assign year_list = "" | split: "" %}
     {% for post in site.posts %}
-      {% assign y = post.date | date: "%Y" %}
+  {% assign y = post.date | date: '%Y' %}
       {% unless year_list contains y %}
         {% assign year_list = year_list | push: y %}
       {% endunless %}
@@ -48,7 +48,7 @@ permalink: /years/
   <h2 id="year-{{ y }}">{{ y }}</h2>
   <ul>
     {% for post in site.posts %}
-      {% if post.date | date: "%Y" == y %}
+        {% if post.date | date: '%Y' == y %}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           <span> — {{ post.date | date: "%Y-%m-%d" }}</span>
