@@ -28,7 +28,8 @@ permalink: /years/
     {% for y in year_list %}
       {% assign count = 0 %}
       {% for post in site.posts %}
-  {% if post.date | date: '%Y' == y %}
+        {% assign post_year = post.date | date: '%Y' %}
+        {% if post_year == y %}
           {% assign count = count | plus: 1 %}
         {% endif %}
       {% endfor %}
@@ -47,12 +48,13 @@ permalink: /years/
   <h2 id="year-{{ y }}">{{ y }}</h2>
   <ul>
     {% for post in site.posts %}
-        {% if post.date | date: '%Y' == y %}
+        {% assign post_year = post.date | date: '%Y' %}
+        {% if post_year == y %}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           <span> — {{ post.date | date: '%Y-%m-%d' }}</span>
         </li>
-      {% endif %}
+        {% endif %}
     {% endfor %}
   </ul>
 {% endfor %}
