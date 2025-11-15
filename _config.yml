@@ -32,6 +32,12 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Top navigation: if these pages exist they'll be shown in the header
+header_pages:
+  - categories.md
+  - years.md
+  - about.md
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
