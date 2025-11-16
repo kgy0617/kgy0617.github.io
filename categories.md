@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 카테고리
+title: Categories
 permalink: /categories/
 ---
 
-<h1>카테고리</h1>
+<h1>Categories</h1>
 
 <ul>
   {% assign cats = site.categories | sort %}

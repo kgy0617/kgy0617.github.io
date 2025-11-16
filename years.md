@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 연도
+title: Year
 permalink: /years/
 ---
 
-<h1>연도</h1>
+<h1>Year</h1>
 
 {%- comment -%}
 연도별 글 개수 요약 (상단 테이블)
