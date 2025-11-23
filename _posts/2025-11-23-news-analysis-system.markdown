@@ -75,6 +75,27 @@ categories: ai data
   }
 </style>
 
+I have added a new **News Analysis System** to verify Actor, Tone, and Economic State from news articles.
+
+## Development Story
+
+### 1. Objective
+The goal of this system is to automatically analyze financial news articles to extract key economic indicators:
+- **Actor**: Who is speaking or acting (e.g., Central Bank, Government).
+- **Tone**: The sentiment of the statement (e.g., Neutral, Concerned, Optimistic).
+- **Economic State**: The extracted economic condition or forecast (e.g., Interest rate freeze, GDP growth forecast).
+
+### 2. Technical Approach
+The system processes raw news text and identifies specific spans related to these categories. It uses a structured data format (JSON) to map text segments to their attributes, allowing for interactive visualization where users can step through each extraction.
+
+### 3. Visualization
+The dashboard provides an interactive interface to:
+- Highlight extracted entities in the text.
+- Display detailed attributes for each extraction.
+- Navigate through the article to see how the narrative evolves.
+
+You can view the full analysis dashboard below:
+
 <div class="news-dashboard">
   <div class="header">
     <h1>📰 뉴스 분석 시스템</h1>
