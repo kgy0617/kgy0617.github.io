@@ -23,7 +23,7 @@ email: www.linkedin.com/in/giyong-kim-503522139
 description: >- # this means to ignore newlines until "baseurl:"
   "AI engineering, data systems, and economic analysis — notes and projects by kgy0617."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kgy0617@github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://kgy0617.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: kgy0617
 
@@ -31,6 +31,8 @@ github_username: kgy0617
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Top navigation: if these pages exist they'll be shown in the header
 header_pages:
