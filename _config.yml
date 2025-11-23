@@ -36,6 +36,7 @@ plugins:
 
 # Top navigation: if these pages exist they'll be shown in the header
 header_pages:
+  - portfolio.md
   - categories.md
   - years.md
   - about.md
