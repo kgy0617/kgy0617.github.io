@@ -4,7 +4,22 @@ title: Year
 permalink: /years/
 ---
 
-<h1>Year</h1>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+  }
+  th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+  }
+</style>
 
 {%- comment -%}
 연도별 글 개수 요약 (상단 테이블)
