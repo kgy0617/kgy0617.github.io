@@ -34,6 +34,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Google AdSense
+# google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX"
+
 # Top navigation: if these pages exist they'll be shown in the header
 header_pages:
   - portfolio.md
