@@ -11,11 +11,19 @@ layout: home
     statistical software that national institutions run on.
   </p>
 
-  <p class="home-paper">
-    <span class="home-paper-tag">Paper</span>
-    <a href="https://aclanthology.org/2026.trustnlp-main.52/" target="_blank" rel="noopener">The Conservative AI: Diagnosing Hold Bias in Persona-Based Monetary Policy Simulation</a>
-    <span class="home-paper-venue">TrustNLP 2026 · ACL</span>
-  </p>
+  <div class="home-papers">
+    <span class="home-paper-tag">Papers</span>
+    <ul>
+      <li>
+        <a class="home-paper-link" href="https://aclanthology.org/2026.trustnlp-main.52/" target="_blank" rel="noopener">The Conservative AI: Diagnosing Hold Bias in Persona-Based Monetary Policy Simulation</a>
+        <span class="home-paper-venue">TrustNLP 2026 · ACL</span>
+      </li>
+      <li>
+        <a class="home-paper-link" href="https://cifer2026.mhirano.jp/accepted_papers" target="_blank" rel="noopener">Anchor-and-Verify LLM Cascades for Economic Measurement of Data-Intensive Work</a>
+        <span class="home-paper-venue">IEEE CIFEr 2026<span class="home-paper-status">accepted</span></span>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div class="home-highlights">

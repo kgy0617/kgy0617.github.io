@@ -373,20 +373,15 @@
    Publications
    -------------------------------------------------------------------------- */
 
-.home-paper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin: 1.4rem 0 0 0;
+.home-papers {
+  margin-top: 1.4rem;
   padding-top: 1.2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 0.87rem;
-  line-height: 1.5;
 }
 
 .home-paper-tag {
-  flex: none;
+  display: inline-block;
+  margin-bottom: 0.6rem;
   padding: 0.1rem 0.5rem;
   border-radius: 9999px;
   background: rgba(56, 189, 248, 0.16);
@@ -397,8 +392,25 @@
   text-transform: uppercase;
 }
 
-.home-paper a {
-  flex: 1 1 20rem;
+.home-papers ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.home-papers li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.8rem;
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.home-paper-link {
+  flex: 1 1 22rem;
   color: var(--hero-text);
   font-weight: 600;
   /* Underline the text, not the flex item — a border would run the full
@@ -409,12 +421,23 @@
   text-underline-offset: 3px;
 }
 
-.home-paper a:hover { color: var(--accent-soft); text-decoration-color: var(--accent-soft); }
+.home-paper-link:hover { color: var(--accent-soft); text-decoration-color: var(--accent-soft); }
 
 .home-paper-venue {
   flex: none;
   color: var(--hero-muted);
   font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.home-paper-status {
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.42rem;
+  border-radius: 9999px;
+  background: rgba(217, 119, 6, 0.28);
+  color: #fcd34d;
+  font-size: 0.68rem;
+  font-weight: 700;
 }
 
 .pub-list { display: grid; gap: 1.2rem; }
