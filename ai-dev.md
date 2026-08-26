@@ -53,6 +53,7 @@ graph TD
 ### 3. Multi-Agent Deliberation & Precedent RAG (FOMC Agent Council)
 * **Deliberative Polarization**: Simulating monetary policy committee dynamics by giving distinct ideological mandates (Hawkish vs. Dovish) anchored by a consensus-seeking Centrist Chair.
 * **Hybrid RAG Precedent Engine**: Retrieving historical policy precedents and meeting minutes to anchor qualitative reasoning in institutional memory.
+* **Negative Result — Deliberation Is Not Enough**: Evaluated against strictly time-consistent vintage data, committee-style debate did *not* beat a single-LLM baseline. All models exhibited **Hold bias** — over-predicting Hold and resisting Cut through easing cycles — and debate/consensus aggregation amplified that caution instead of correcting it. Published at [TrustNLP 2026](https://aclanthology.org/2026.trustnlp-main.52/).
 
 ---
 
@@ -72,5 +73,5 @@ graph TD
 
 * 🚀 [EPU: Hierarchical 2-Stage Multi-Agent Classification Pipeline](/ai/data/2026/08/15/epu-multi-agent-classification-pipeline.html)
 * 🧠 [Agent CSI: Simulating Central Bank Consumer Surveys with 2,500 LLM Agents](/ai/economics/2026/08/08/agent-csi-llm-consumer-sentiment-simulation.html)
-* 🏛️ [FOMC Agent Council: Multi-Agent Monetary Policy Deliberation](/ai/economics/2026/02/20/fomc-agent-council-monetary-policy-simulation.html)
+* 🏛️ [FOMC Agent Council: Multi-Agent Monetary Policy Deliberation](/ai/economics/2026/02/20/fomc-agent-council-monetary-policy-simulation.html) — published at [TrustNLP 2026](https://aclanthology.org/2026.trustnlp-main.52/)
 * 📰 [Central Bank News Analysis System Architecture](/ai/data/2025/11/23/news-analysis-system.html)

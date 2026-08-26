@@ -243,8 +243,8 @@ permalink: /portfolio/
         <span class="stat-label">Peak F1 Score</span>
       </div>
       <div class="stat-box">
-        <span class="stat-number">10M+</span>
-        <span class="stat-label">Processed Texts</span>
+        <span class="stat-number">ACL 2026</span>
+        <span class="stat-label">Peer-Reviewed</span>
       </div>
     </div>
   </div>
@@ -315,12 +315,13 @@ permalink: /portfolio/
         <span class="project-badge">Lead Developer</span>
       </div>
       <p class="project-desc">
-        A deliberative multi-agent framework modeling the US Federal Open Market Committee (FOMC) interest rate decisions through simulated interactions between Hawkish, Dovish, and Centrist Chair personas.
+        A deliberative multi-agent framework modeling the US Federal Open Market Committee (FOMC) interest rate decisions through simulated interactions between Hawkish, Dovish, and Centrist Chair personas — and a peer-reviewed diagnosis of where that framework fails.
       </p>
       <ul class="feature-list">
         <li><strong>Council Protocol</strong>: Simulates structured debate rounds between economic perspectives, grounded in qualitative Beige Book summaries and quantitative macroeconomic indicators.</li>
         <li><strong>RAG Integration</strong>: Precedent retrieval engine indexing historical FOMC minutes, transcripts, and policy statements.</li>
-        <li><strong>Systematic Experimentation (E1~E6)</strong>: Evaluated decision accuracy across snapshot vs. 3M/6M trend horizons, comparing model choices against empirical FOMC rate actions and Taylor Rule benchmarks.</li>
+        <li><strong>Systematic Experimentation (E1~E6 × M1~M5)</strong>: Evaluated decision accuracy across snapshot vs. 3M/6M trend horizons on strictly time-consistent vintage data, against empirical FOMC rate actions and Taylor Rule benchmarks.</li>
+        <li><strong>Published Finding — "Hold Bias"</strong>: LLM committees systematically over-predict Hold and resist Cut even during easing cycles. Debate and consensus aggregation <em>amplify</em> this caution rather than correcting it, which is costly precisely at policy turning points.</li>
       </ul>
       <div class="tech-tags">
         <span class="tech-tag">Multi-Agent Debate</span>
@@ -331,6 +332,7 @@ permalink: /portfolio/
       </div>
       <div class="project-links">
         <a class="project-link" href="/ai/economics/2026/02/20/fomc-agent-council-monetary-policy-simulation.html">Read Deep-Dive Article →</a>
+        <a class="project-link" href="https://aclanthology.org/2026.trustnlp-main.52/" target="_blank" rel="noopener">Paper (TrustNLP 2026) →</a>
       </div>
     </div>
 
@@ -444,9 +446,37 @@ permalink: /portfolio/
 
   </div>
 
-  <!-- SECTION 4: Skills Matrix -->
+  <!-- SECTION 4: Publications -->
   <div class="section-heading">
-    <span>⚡</span> 4. Technical Competencies
+    <span>📚</span> 4. Publications
+  </div>
+
+  <div class="pub-list">
+    <div class="pub-entry">
+      <h3 class="pub-title">The Conservative AI: Diagnosing Hold Bias and Reliability Limits in Persona-Based Monetary Policy Simulation</h3>
+      <p class="pub-authors"><strong>Giyong Kim</strong>, Sojung Kim</p>
+      <p class="pub-venue">
+        Proceedings of the 6th Workshop on Trustworthy NLP (TrustNLP 2026),
+        Association for Computational Linguistics · San Diego, California · July 2026 · pp. 663–677
+      </p>
+      <p class="pub-abstract">
+        Evaluates whether LLMs can reliably simulate historical FOMC decisions under strictly
+        time-consistent vintage information. Identifies <em>Hold bias</em> — a systematic reluctance to
+        predict Cut even during easing cycles — and shows that debate and consensus-style agentic
+        workflows amplify rather than mitigate it, concluding that plausible deliberation alone is not
+        sufficient for trustworthy decision support.
+      </p>
+      <div class="project-links">
+        <a class="project-link" href="https://aclanthology.org/2026.trustnlp-main.52/" target="_blank" rel="noopener">ACL Anthology →</a>
+        <a class="project-link" href="https://aclanthology.org/2026.trustnlp-main.52.pdf" target="_blank" rel="noopener">PDF →</a>
+        <a class="project-link" href="https://doi.org/10.18653/v1/2026.trustnlp-main.52" target="_blank" rel="noopener">DOI →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Skills Matrix -->
+  <div class="section-heading">
+    <span>⚡</span> 5. Technical Competencies
   </div>
 
   <div class="skills-container">

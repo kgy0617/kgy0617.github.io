@@ -17,7 +17,7 @@ My work focuses on designing autonomous multi-agent simulation frameworks for ma
 ### 1. LLM & Multi-Agent Intelligence
 * **Economic Policy Uncertainty (EPU)**: Architected a two-stage hierarchical multi-agent classification pipeline (Gate Agent + 5 Expert Agents) with dynamic few-shot retrieval (kNN + BM25 RRF).
 * **Agent CSI**: Developed a full-scale LLM simulation of the Bank of Korea’s Consumer Sentiment Survey with 2,500 stratified household personas, causal shock graphs, and empirical alignment validation.
-* **FOMC Agent Council**: Modeled monetary policy deliberation and rate-setting via multi-agent debate (Hawk, Dove, Chair) and RAG over historical FOMC records and the Beige Book.
+* **FOMC Agent Council**: Modeled monetary policy deliberation and rate-setting via multi-agent debate (Hawk, Dove, Chair) and RAG over historical FOMC records and the Beige Book — and diagnosed its **Hold bias** failure mode (TrustNLP 2026).
 * **Central Bank News Analysis**: Built distributed multi-agent pipelines for clustering, sentiment extraction, and real-time macro signal tracking from financial media.
 
 ### 2. Central Banking & Data Systems
@@ -40,8 +40,15 @@ My work focuses on designing autonomous multi-agent simulation frameworks for ma
 
 ---
 
+## 📚 Publications
+
+* **Giyong Kim**, Sojung Kim. *The Conservative AI: Diagnosing Hold Bias and Reliability Limits in Persona-Based Monetary Policy Simulation.* Proceedings of the 6th Workshop on Trustworthy NLP (TrustNLP 2026), Association for Computational Linguistics, San Diego, July 2026, pp. 663–677.
+  [ACL Anthology](https://aclanthology.org/2026.trustnlp-main.52/) · [PDF](https://aclanthology.org/2026.trustnlp-main.52.pdf) · [DOI](https://doi.org/10.18653/v1/2026.trustnlp-main.52)
+
+---
+
 ## 📑 Explore Further
 
 * 📁 **[Portfolio](/portfolio/)**: Interactive showcase of core systems and research projects
 * 🤖 **[AI Development](/ai-dev/)**: Technical architecture deep-dives and engineering notes
-* 🏷️ **[Categories & Topics](/categories/)**: Browse all blog articles by tag and domain
+* 🗂️ **[Archive](/archive/)**: Every article by year, filterable by topic
