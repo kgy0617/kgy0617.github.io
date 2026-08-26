@@ -1,0 +1,12 @@
+{%- comment -%}
+Renders a post's categories as colour-coded chips.
+Usage: {% include category-badges.html categories=post.categories %}
+Colours are defined in assets/main.scss; unknown categories fall back to grey.
+{%- endcomment -%}
+{%- if include.categories and include.categories.size > 0 -%}
+<span class="cat-badges">
+  {%- for c in include.categories -%}
+  <a class="cat-badge" data-cat="{{ c | downcase }}" href="{{ '/archive/' | relative_url }}#{{ c | slugify }}">{{ c }}</a>
+  {%- endfor -%}
+</span>
+{%- endif -%}

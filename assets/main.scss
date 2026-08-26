@@ -28,6 +28,14 @@
   --hero-muted:     #cbd5e1;
   --shadow-sm:      0 2px 6px rgba(0, 0, 0, 0.03);
   --shadow-md:      0 8px 24px rgba(0, 0, 0, 0.07);
+
+  /* Category chips. Categories are a weak axis on this site, so they read as
+     quiet markers, not headline colour. */
+  --cat-default-fg: #475569;  --cat-default-bg: #f1f5f9;
+  --cat-ai-fg:        #6d28d9;  --cat-ai-bg:        #ede9fe;
+  --cat-data-fg:      #0369a1;  --cat-data-bg:      #e0f2fe;
+  --cat-economics-fg: #047857;  --cat-economics-bg: #d1fae5;
+  --cat-software-fg:  #b45309;  --cat-software-bg:  #fef3c7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +57,12 @@
     --hero-muted:     #b6c4d6;
     --shadow-sm:      0 2px 6px rgba(0, 0, 0, 0.35);
     --shadow-md:      0 8px 24px rgba(0, 0, 0, 0.45);
+
+    --cat-default-fg: #b6c4d6;  --cat-default-bg: rgba(148, 163, 184, 0.16);
+    --cat-ai-fg:        #c4b5fd;  --cat-ai-bg:        rgba(124, 58, 237, 0.22);
+    --cat-data-fg:      #7dd3fc;  --cat-data-bg:      rgba(2, 132, 199, 0.22);
+    --cat-economics-fg: #6ee7b7;  --cat-economics-bg: rgba(5, 150, 105, 0.22);
+    --cat-software-fg:  #fcd34d;  --cat-software-bg:  rgba(217, 119, 6, 0.22);
   }
 }
 
@@ -218,32 +232,255 @@
   color: var(--text-muted);
 }
 
-/* --------------------------------------------------------------------------
-   Archive tables (years.md)
-   -------------------------------------------------------------------------- */
-
-.archive-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
-}
-
-.archive-table th,
-.archive-table td {
-  text-align: center;
-  padding: 10px;
-  border: 1px solid var(--border);
-}
-
-.archive-table th {
-  background-color: var(--surface-sunken);
-  color: var(--text-strong);
-  font-weight: 600;
-}
-
 /* Wide post tables must scroll inside their own box, never the page. */
 .post-content table {
   display: block;
   max-width: 100%;
   overflow-x: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Category chips
+   -------------------------------------------------------------------------- */
+
+.cat-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  vertical-align: middle;
+}
+
+.cat-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--cat-default-fg);
+  background: var(--cat-default-bg);
+}
+
+.cat-badge:hover,
+.cat-badge:focus {
+  text-decoration: none;
+  filter: brightness(0.94);
+}
+
+.post-header .cat-badges { margin-top: 0.15rem; }
+
+.cat-badge[data-cat="ai"]        { color: var(--cat-ai-fg);        background: var(--cat-ai-bg); }
+.cat-badge[data-cat="data"]      { color: var(--cat-data-fg);      background: var(--cat-data-bg); }
+.cat-badge[data-cat="economics"] { color: var(--cat-economics-fg); background: var(--cat-economics-bg); }
+.cat-badge[data-cat="software"]  { color: var(--cat-software-fg);  background: var(--cat-software-bg); }
+
+/* --------------------------------------------------------------------------
+   Archive (merged categories + years)
+   -------------------------------------------------------------------------- */
+
+.archive-intro {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 1.1rem;
+}
+
+.archive-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-bottom: 1.4rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.archive-filter:hover { border-color: var(--border-strong); color: var(--text); }
+
+.archive-filter-count {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  opacity: 0.75;
+}
+
+.archive-filter.is-active {
+  border-color: currentColor;
+  color: var(--text-strong);
+  background: var(--surface-sunken);
+}
+
+/* An active topic filter takes on that topic's colour. */
+.archive-filter.is-active[data-cat="ai"]        { color: var(--cat-ai-fg);        background: var(--cat-ai-bg); }
+.archive-filter.is-active[data-cat="data"]      { color: var(--cat-data-fg);      background: var(--cat-data-bg); }
+.archive-filter.is-active[data-cat="economics"] { color: var(--cat-economics-fg); background: var(--cat-economics-bg); }
+.archive-filter.is-active[data-cat="software"]  { color: var(--cat-software-fg);  background: var(--cat-software-bg); }
+.archive-filter.is-active .archive-filter-count { color: inherit; }
+
+.archive-year { margin-top: 1.8rem; }
+
+.archive-year-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.archive-year-count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.archive-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.archive-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-item:last-child { border-bottom: none; }
+
+.archive-date {
+  flex: 0 0 3.6rem;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.archive-link {
+  flex: 1 1 16rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.archive-link:hover { color: var(--link); }
+
+.archive-empty {
+  margin-top: 1.5rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .archive-date { flex-basis: 100%; }
+}
+
+/* The [hidden] attribute is what the archive filter toggles, but a UA
+   `display: none` loses to the author `display: flex` above. Restate it. */
+.archive-item[hidden],
+.archive-year[hidden],
+.archive-empty[hidden] { display: none; }
+
+/* --------------------------------------------------------------------------
+   Publications
+   -------------------------------------------------------------------------- */
+
+.home-paper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 1.4rem 0 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.home-paper-tag {
+  flex: none;
+  padding: 0.1rem 0.5rem;
+  border-radius: 9999px;
+  background: rgba(56, 189, 248, 0.16);
+  color: var(--accent-soft);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-paper a {
+  flex: 1 1 20rem;
+  color: var(--hero-text);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-paper a:hover { color: var(--accent-soft); border-bottom-color: var(--accent-soft); }
+
+.home-paper-venue {
+  flex: none;
+  color: var(--hero-muted);
+  font-size: 0.78rem;
+}
+
+.pub-list { display: grid; gap: 1.2rem; }
+
+.pub-entry {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pub-title {
+  margin: 0 0 0.45rem 0;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-strong);
+}
+
+.pub-authors {
+  margin: 0 0 0.2rem 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.pub-venue {
+  margin: 0 0 0.8rem 0;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.pub-abstract {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text);
 }

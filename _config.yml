@@ -28,8 +28,7 @@ plugins:
 header_pages:
   - portfolio.md
   - ai-dev.md
-  - categories.md
-  - years.md
+  - archive.md
   - about.markdown
 
 # Exclude from processing
