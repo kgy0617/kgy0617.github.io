@@ -1,0 +1,105 @@
+<!doctype html>
+<!--
+  Source for assets/images/og-card.png (1200x630 social preview).
+  Regenerate:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless --disable-gpu --hide-scrollbars \
+      --window-size=1200,630 \
+      --screenshot=assets/images/og-card.png \
+      _social/og-card.html
+  Palette matches the site hero tokens in assets/main.scss.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 84px;
+    background:
+      radial-gradient(900px 420px at 88% -12%, rgba(56, 189, 248, 0.20), transparent 62%),
+      linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Thin accent rule down the left edge, echoing the portfolio cards. */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 10px; height: 100%;
+    background: linear-gradient(180deg, #38bdf8 0%, #6d28d9 100%);
+  }
+  .eyebrow {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: #38bdf8;
+    margin-bottom: 22px;
+  }
+  .name {
+    font-size: 104px;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    margin-bottom: 26px;
+  }
+  .lede {
+    font-size: 31px;
+    line-height: 1.45;
+    color: #cbd5e1;
+    max-width: 900px;
+    font-weight: 400;
+  }
+  .lede b { color: #f8fafc; font-weight: 600; }
+  .rule {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.13);
+    margin: 40px 0 26px;
+  }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 22px;
+    color: #94a3b8;
+  }
+  .chip {
+    padding: 7px 17px;
+    border-radius: 999px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .chip-ai        { color: #c4b5fd; background: rgba(124, 58, 237, 0.24); }
+  .chip-econ      { color: #6ee7b7; background: rgba(5, 150, 105, 0.24); }
+  .chip-data      { color: #7dd3fc; background: rgba(2, 132, 199, 0.26); }
+  .spacer { flex: 1; }
+  .site { color: #cbd5e1; font-weight: 600; letter-spacing: 0.01em; }
+</style>
+</head>
+<body>
+  <div class="eyebrow">AI &amp; Central Banking Engineering</div>
+  <div class="name">Giyong Kim</div>
+  <div class="lede">
+    Multi-agent LLM systems for <b>monetary policy</b>, <b>consumer sentiment</b>,
+    and <b>economic policy uncertainty</b> — and the statistical software central banks run on.
+  </div>
+  <div class="rule"></div>
+  <div class="meta">
+    <span class="chip chip-ai">multi-agent</span>
+    <span class="chip chip-econ">central banking</span>
+    <span class="chip chip-data">econometrics</span>
+    <span class="spacer"></span>
+    <span class="site">kgy0617.github.io</span>
+  </div>
+</body>
+</html>

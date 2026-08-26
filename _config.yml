@@ -14,6 +14,19 @@ baseurl: ""
 url: "https://kgy0617.github.io"
 github_username: kgy0617
 linkedin_username: giyong-kim-503522139
+
+# Social preview card. jekyll-seo-tag reads `page.image` only — it has no
+# `site.image` fallback — so the default has to be injected per page below.
+# Any post can override it with its own `image:` in front matter.
+# Regenerate the card with the sources in _social/ — see _social/README.md.
+twitter:
+  card: summary_large_image
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-card.png
 # Set a real address here to show a contact email in the footer.
 # email: you@example.com
 
