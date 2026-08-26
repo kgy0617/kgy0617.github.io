@@ -44,6 +44,8 @@ My work focuses on designing autonomous multi-agent simulation frameworks for ma
 
 * **Giyong Kim**, Sojung Kim. *The Conservative AI: Diagnosing Hold Bias and Reliability Limits in Persona-Based Monetary Policy Simulation.* Proceedings of the 6th Workshop on Trustworthy NLP (TrustNLP 2026), Association for Computational Linguistics, San Diego, July 2026, pp. 663–677.
   [ACL Anthology](https://aclanthology.org/2026.trustnlp-main.52/) · [PDF](https://aclanthology.org/2026.trustnlp-main.52.pdf) · [DOI](https://doi.org/10.18653/v1/2026.trustnlp-main.52)
+* **Giyong Kim**, Sojung Kim. *Anchor-and-Verify LLM Cascades for Economic Measurement of Data-Intensive Work from Online Job Postings.* IEEE Computational Intelligence in Financial Engineering and Economics (CIFEr 2026), Tokyo, September 2026. **Accepted — to be presented.**
+  [Accepted papers](https://cifer2026.mhirano.jp/accepted_papers)
 
 ---
 

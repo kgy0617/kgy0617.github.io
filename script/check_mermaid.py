@@ -115,7 +115,8 @@ def main():
             .replace("__MERMAID__", mermaid_src_url(root))
             .replace("__JSON__", json.dumps(blocks, ensure_ascii=False)))
 
-    with tempfile.TemporaryDirectory() as tmp:
+    tmp = tempfile.mkdtemp(prefix="mermaid-check-")
+    try:
         page_path = pathlib.Path(tmp) / "check.html"
         page_path.write_text(page, encoding="utf-8")
         cmd = [
@@ -141,7 +142,15 @@ def main():
         reader.start()
         reader.join(timeout=90)
         proc.kill()
+        # Wait for it to actually die. A killed-but-still-exiting Chrome keeps
+        # writing into its profile, which makes removing the temp dir fail.
+        try:
+            proc.wait(timeout=15)
+        except subprocess.TimeoutExpired:
+            pass
         dom = "".join(chunks)
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
 
     m = re.search(r'<pre id="out">(.*?)</pre>', dom, re.S)
     result = html.unescape(m.group(1)).strip() if m else ""

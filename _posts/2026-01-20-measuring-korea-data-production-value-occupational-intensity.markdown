@@ -5,6 +5,17 @@ date:   2026-01-20 10:00:00 +0900
 categories: economics data
 ---
 
+> **📄 후속 연구가 학회에 채택되었습니다**
+>
+> Giyong Kim, Sojung Kim. *Anchor-and-Verify LLM Cascades for Economic Measurement of
+> Data-Intensive Work from Online Job Postings.* IEEE Computational Intelligence in
+> Financial Engineering and Economics (CIFEr 2026), Tokyo, 2026년 9월. **채택 — 발표 예정.**
+>
+> [채택 논문 목록](https://cifer2026.mhirano.jp/accepted_papers)
+>
+> 아래 글은 이 연구 라인의 초기 작업으로, 사전 기반 추정기와 모델 벤치마크를 다룹니다.
+> 논문의 anchor-and-verify 캐스케이드 방법론은 이 글에 포함되어 있지 않습니다.
+
 ## 1. 연구 배경: 디지털 경제와 새로운 생산요소 '데이터'
 
 데이터의 생성, 관리 및 분석은 전 산업에 걸쳐 생산성 향상의 핵심 동력으로 자리 잡았습니다. OECD, IMF, BIS 등 주요 국제기구는 국민계정(National Accounts) 체계 내에서 **데이터의 자산 가치를 정량적으로 측정하고, 노동시장에서 데이터 집약적 직무로의 전환 과정을 파악할 것**을 권고하고 있습니다.

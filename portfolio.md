@@ -441,6 +441,7 @@ permalink: /portfolio/
       </div>
       <div class="project-links">
         <a class="project-link" href="/economics/data/2026/01/20/measuring-korea-data-production-value-occupational-intensity.html">Read Deep-Dive Article →</a>
+        <a class="project-link" href="https://cifer2026.mhirano.jp/accepted_papers" target="_blank" rel="noopener">Paper (IEEE CIFEr 2026) →</a>
       </div>
     </div>
 
@@ -470,6 +471,25 @@ permalink: /portfolio/
         <a class="project-link" href="https://aclanthology.org/2026.trustnlp-main.52/" target="_blank" rel="noopener">ACL Anthology →</a>
         <a class="project-link" href="https://aclanthology.org/2026.trustnlp-main.52.pdf" target="_blank" rel="noopener">PDF →</a>
         <a class="project-link" href="https://doi.org/10.18653/v1/2026.trustnlp-main.52" target="_blank" rel="noopener">DOI →</a>
+      </div>
+    </div>
+
+    <div class="pub-entry">
+      <h3 class="pub-title">Anchor-and-Verify LLM Cascades for Economic Measurement of Data-Intensive Work from Online Job Postings</h3>
+      <p class="pub-authors"><strong>Giyong Kim</strong>, Sojung Kim</p>
+      <p class="pub-venue">
+        IEEE Computational Intelligence in Financial Engineering and Economics (CIFEr 2026)
+        · Tokyo, Japan · September 2026
+        <span class="pub-status">Accepted — to be presented</span>
+      </p>
+      <p class="pub-abstract">
+        Applies an anchor-and-verify LLM cascade to measuring data-intensive work from
+        large-scale online job postings, extending the occupational data-intensity
+        estimation described in the article below.
+      </p>
+      <div class="project-links">
+        <a class="project-link" href="https://cifer2026.mhirano.jp/accepted_papers" target="_blank" rel="noopener">Accepted papers →</a>
+        <a class="project-link" href="/economics/data/2026/01/20/measuring-korea-data-production-value-occupational-intensity.html">Related article →</a>
       </div>
     </div>
   </div>
