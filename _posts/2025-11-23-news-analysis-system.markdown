@@ -29,6 +29,9 @@ categories: ai data
     opacity: 0.9;
     color: rgba(255, 255, 255, 0.9);
   }
+  .news-dashboard .article-count {
+    color: #666;
+  }
   .news-dashboard .selector-container {
     background: white;
     padding: 20px;
@@ -106,9 +109,8 @@ You can view the full analysis dashboard below:
     <label for="articleSelect">📄 기사 선택:</label>
     <select id="articleSelect" onchange="changeArticle()">
       <option value="news_article_1.html">기사 1</option>
-      <option value="news_article_2.html">기사 2</option>
     </select>
-    <span style="color: #666;">총 2개 기사</span>
+    <span class="article-count">총 1개 기사</span>
   </div>
 
   <div class="frame-container">

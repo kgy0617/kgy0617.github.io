@@ -5,13 +5,17 @@
 # yourself editing this file very often, consider using Jekyll's data files
 # feature for the data you need to update frequently.
 
-title: "Giyong Kim | AI & Central Banking Engineering"
-email: www.linkedin.com/in/giyong-kim-503522139
+title: "Giyong Kim"
+tagline: "AI & Central Banking Engineering"
+author: "Giyong Kim"
 description: >-
   AI engineering, multi-agent simulation systems, central banking software, and empirical econometric analysis — research and projects by Giyong Kim.
 baseurl: ""
 url: "https://kgy0617.github.io"
 github_username: kgy0617
+linkedin_username: giyong-kim-503522139
+# Set a real address here to show a contact email in the footer.
+# email: you@example.com
 
 # Build settings
 theme: minima
@@ -30,6 +34,7 @@ header_pages:
 
 # Exclude from processing
 exclude:
+  - README.md
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
