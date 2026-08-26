@@ -73,6 +73,7 @@ flowchart TD
 ## 4. 핵심 코드 구현 상세
 
 ### 명절효과 회귀자 및 SPEC 자동 생성
+{% raw %}
 ```python
 class BOKX13SpecGenerator:
     def __init__(self, series_name, start_period, period_type="monthly"):
@@ -109,6 +110,7 @@ x11 {
 """
         return spc
 ```
+{% endraw %}
 
 ---
 
