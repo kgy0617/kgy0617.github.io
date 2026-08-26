@@ -47,6 +47,7 @@ header_pages:
 # Exclude from processing
 exclude:
   - README.md
+  - script/
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/

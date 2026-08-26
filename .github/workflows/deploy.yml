@@ -29,6 +29,12 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      # A malformed mermaid block does not fail the Jekyll build — the page
+      # ships and the diagram becomes an error box in the reader's browser.
+      # Catch it here instead. Uses the Chrome preinstalled on the runner.
+      - name: Check mermaid diagrams
+        run: python3 script/check_mermaid.py
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6

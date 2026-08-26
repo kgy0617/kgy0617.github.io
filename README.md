@@ -53,6 +53,16 @@ matters because a broken diagram **does not fail the build** — Jekyll ships th
 mermaid renders an error box in the browser instead, so nobody finds out until someone
 opens the post. After editing a diagram, load the page and look at it.
 
+`script/check_mermaid.py` parses every diagram on the site with the same mermaid build
+the pages load — it reads the version straight out of `_includes/head.html`, so the check
+cannot drift from production. It runs in CI before the Jekyll build, and locally:
+
+```bash
+python3 script/check_mermaid.py     # exits non-zero on a broken diagram
+```
+
+It needs a Chrome or Chromium binary; set `CHROME_BIN` if discovery fails.
+
 **Math.** Inline math is `$...$`, display math is `$$...$$`. Because `$` is the inline
 delimiter, write a literal dollar sign as `\$` — otherwise two currency amounts in one
 paragraph get parsed as a formula.
