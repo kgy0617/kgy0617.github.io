@@ -148,40 +148,6 @@
 
 .home-lede strong { color: var(--hero-text); }
 
-.home-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
-}
-
-.home-btn {
-  display: inline-block;
-  padding: 0.5rem 1.05rem;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 9999px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--hero-muted);
-  text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-.home-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.home-btn-primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #ffffff;
-}
-
-.home-btn-primary:hover { background: var(--accent-soft); border-color: var(--accent-soft); color: #0f172a; }
-
 .home-highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -435,11 +401,15 @@
   flex: 1 1 20rem;
   color: var(--hero-text);
   font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /* Underline the text, not the flex item — a border would run the full
+     column width and trail past the last wrapped line. */
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
-.home-paper a:hover { color: var(--accent-soft); border-bottom-color: var(--accent-soft); }
+.home-paper a:hover { color: var(--accent-soft); text-decoration-color: var(--accent-soft); }
 
 .home-paper-venue {
   flex: none;

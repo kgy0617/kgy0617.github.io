@@ -41,6 +41,18 @@ post's date or categories means updating them there too.
 **Diagrams.** Fence a block as ` ```mermaid ` and `_includes/head.html` converts it at load
 time. Mermaid runs before KaTeX and diagram bodies are excluded from math rendering.
 
+Quote any edge label containing punctuation — parentheses, colons, commas, quotes:
+
+```
+A -->|"정합성 검증 (28개월 시계열)"| B     ✅
+A -->|정합성 검증 (28개월 시계열)| B       ❌ Parse error
+```
+
+Node labels (`A["..."]`) are already quoted, so only the `|...|` edge labels bite. This
+matters because a broken diagram **does not fail the build** — Jekyll ships the page and
+mermaid renders an error box in the browser instead, so nobody finds out until someone
+opens the post. After editing a diagram, load the page and look at it.
+
 **Math.** Inline math is `$...$`, display math is `$$...$$`. Because `$` is the inline
 delimiter, write a literal dollar sign as `\$` — otherwise two currency amounts in one
 paragraph get parsed as a formula.

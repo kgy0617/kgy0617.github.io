@@ -11,15 +11,6 @@ layout: home
     statistical software that national institutions run on.
   </p>
 
-  <div class="home-cta">
-    <a class="home-btn home-btn-primary" href="{{ '/portfolio/' | relative_url }}">Portfolio</a>
-    <a class="home-btn" href="{{ '/ai-dev/' | relative_url }}">AI Architecture</a>
-    <a class="home-btn" href="{{ '/about/' | relative_url }}">About</a>
-    {%- if site.linkedin_username -%}
-    <a class="home-btn" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a>
-    {%- endif -%}
-  </div>
-
   <p class="home-paper">
     <span class="home-paper-tag">Paper</span>
     <a href="https://aclanthology.org/2026.trustnlp-main.52/" target="_blank" rel="noopener">The Conservative AI: Diagnosing Hold Bias in Persona-Based Monetary Policy Simulation</a>
