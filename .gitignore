@@ -1,5 +1,15 @@
+# Jekyll build output & caches
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+
+# Bundler
 vendor
+.bundle/*
+!.bundle/config
+
+# OS / editor cruft
+.DS_Store
+**/.DS_Store
+.vscode/

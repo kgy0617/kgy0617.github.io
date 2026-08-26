@@ -2,8 +2,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     {%- seo -%}
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
     {%- feed_meta -%}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
@@ -15,33 +16,46 @@
         crossorigin="anonymous"></script>
     {%- endif -%}
 
-    <!-- KaTeX for math rendering -->
+    <!-- KaTeX for math rendering.
+         Inline math uses $...$ (kramdown-friendly); write \$ for a literal dollar sign.
+         Mermaid blocks are excluded so diagram labels are never parsed as math. -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body, {
-            delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '$', right: '$', display: false}
-            ],
-            throwOnError: false
-        });"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 
     <!-- Mermaid for diagrams (all layouts) -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
     <script>
+        // Deferred scripts run in order and finish before DOMContentLoaded, so both
+        // `mermaid` and `renderMathInElement` are guaranteed to exist here. Mermaid
+        // converts its code blocks first, then KaTeX renders everything except them.
         document.addEventListener("DOMContentLoaded", function () {
-            mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
-            document.querySelectorAll("pre code.language-mermaid").forEach(function (el) {
-                var container = document.createElement("div");
-                container.className = "mermaid";
-                container.textContent = el.textContent;
-                var pre = el.closest("pre");
-                if (pre) {
-                    pre.parentNode.replaceChild(container, pre);
-                }
-            });
-            mermaid.run();
+            if (window.mermaid) {
+                mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
+                document.querySelectorAll("pre code.language-mermaid").forEach(function (el) {
+                    var container = document.createElement("div");
+                    container.className = "mermaid";
+                    container.textContent = el.textContent;
+                    var pre = el.closest("pre");
+                    if (pre) {
+                        pre.parentNode.replaceChild(container, pre);
+                    }
+                });
+                mermaid.run();
+            }
+
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        { left: '$$', right: '$$', display: true },
+                        { left: '$', right: '$', display: false }
+                    ],
+                    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"],
+                    ignoredClasses: ["mermaid"],
+                    throwOnError: false
+                });
+            }
         });
     </script>
 </head>

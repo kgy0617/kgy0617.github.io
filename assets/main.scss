@@ -1,0 +1,249 @@
+---
+# Front matter (even empty) is required so Jekyll compiles this Sass file.
+---
+
+@import "minima";
+
+/* ==========================================================================
+   Design tokens
+   One palette drives minima's chrome, the portfolio cards and the archive
+   tables, so every page stays consistent in both light and dark mode.
+   ========================================================================== */
+
+:root {
+  --surface:        #ffffff;
+  --surface-subtle: #f8fafc;
+  --surface-sunken: #f1f5f9;
+  --border:         #e2e8f0;
+  --border-strong:  #cbd5e1;
+  --text:           #1e293b;
+  --text-strong:    #0f172a;
+  --text-muted:     #64748b;
+  --link:           #2563eb;
+  --accent:         #3b82f6;
+  --accent-soft:    #38bdf8;
+  --hero-from:      #1e293b;
+  --hero-to:        #0f172a;
+  --hero-text:      #f8fafc;
+  --hero-muted:     #cbd5e1;
+  --shadow-sm:      0 2px 6px rgba(0, 0, 0, 0.03);
+  --shadow-md:      0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface:        #131a26;
+    --surface-subtle: #0f1621;
+    --surface-sunken: #1b2534;
+    --border:         #263447;
+    --border-strong:  #35475f;
+    --text:           #dbe4f0;
+    --text-strong:    #f1f5f9;
+    --text-muted:     #94a3b8;
+    --link:           #7cb0ff;
+    --accent:         #60a5fa;
+    --accent-soft:    #38bdf8;
+    --hero-from:      #16202f;
+    --hero-to:        #0b111a;
+    --hero-text:      #f8fafc;
+    --hero-muted:     #b6c4d6;
+    --shadow-sm:      0 2px 6px rgba(0, 0, 0, 0.35);
+    --shadow-md:      0 8px 24px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Dark-mode overrides for minima's hard-coded colours
+   -------------------------------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  body                       { background-color: var(--surface-subtle); color: var(--text); }
+  a                          { color: var(--link); }
+  a:visited                  { color: var(--link); }
+  a:hover                    { color: var(--text-strong); }
+
+  .site-header               { border-top-color: var(--accent); border-bottom-color: var(--border); }
+  .site-title,
+  .site-title:visited        { color: var(--text-strong); }
+  .site-nav                  { background-color: var(--surface); border-color: var(--border); }
+  .site-nav .page-link       { color: var(--text); }
+  .site-nav .menu-icon > svg path { fill: var(--text-muted); }
+
+  .site-footer               { border-top-color: var(--border); }
+  .footer-heading,
+  .footer-col-wrapper        { color: var(--text-muted); }
+  .svg-icon                  { fill: var(--text-muted); }
+
+  .post-meta                 { color: var(--text-muted); }
+  .post-title,
+  h1, h2, h3, h4, h5, h6     { color: var(--text-strong); }
+
+  pre, code                  { background-color: var(--surface-sunken); border-color: var(--border); color: var(--text); }
+  .highlight,
+  .highlighter-rouge .highlight { background: var(--surface-sunken); }
+  .highlight .c, .highlight .c1, .highlight .cm { color: var(--text-muted); }
+
+  blockquote                 { color: var(--text-muted); border-left-color: var(--border-strong); }
+
+  table                      { color: var(--text); border-color: var(--border); }
+  table th                   { background-color: var(--surface-sunken); border-color: var(--border); color: var(--text-strong); }
+  table td                   { border-color: var(--border); }
+  table tr:nth-child(even)   { background-color: var(--surface); }
+
+  /* Mermaid renders with the light "neutral" theme; keep the canvas readable. */
+  .mermaid                   { background: #f8fafc; border-radius: 8px; padding: 0.75rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Home landing hero
+   -------------------------------------------------------------------------- */
+
+.home-hero {
+  background: linear-gradient(135deg, var(--hero-from) 0%, var(--hero-to) 100%);
+  border-radius: 12px;
+  padding: 2.4rem 1.9rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.home-eyebrow {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.home-title {
+  margin: 0 0 0.7rem 0;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--hero-text);
+}
+
+.home-lede {
+  margin: 0;
+  max-width: 46rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--hero-muted);
+}
+
+.home-lede strong { color: var(--hero-text); }
+
+.home-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 0.5rem 1.05rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--hero-muted);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.home-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.home-btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.home-btn-primary:hover { background: var(--accent-soft); border-color: var(--accent-soft); color: #0f172a; }
+
+.home-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.6rem;
+}
+
+.home-highlight {
+  display: block;
+  padding: 1.15rem 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.home-highlight:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+  text-decoration: none;
+}
+
+.home-highlight-kicker {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.home-highlight-title {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin-bottom: 0.35rem;
+}
+
+.home-highlight-desc {
+  display: block;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Archive tables (years.md)
+   -------------------------------------------------------------------------- */
+
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.archive-table th,
+.archive-table td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid var(--border);
+}
+
+.archive-table th {
+  background-color: var(--surface-sunken);
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+/* Wide post tables must scroll inside their own box, never the page. */
+.post-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}

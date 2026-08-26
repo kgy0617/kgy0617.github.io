@@ -7,30 +7,30 @@ permalink: /portfolio/
 <style>
   .portfolio-wrapper {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #2d3748;
+    color: var(--text);
     line-height: 1.6;
   }
   
   .portfolio-hero {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: linear-gradient(135deg, var(--hero-from) 0%, var(--hero-to) 100%);
     color: white;
     padding: 2.2rem 1.8rem;
     border-radius: 12px;
     margin-bottom: 2.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
   }
   
   .portfolio-hero h1 {
     font-size: 1.85rem;
     font-weight: 800;
     margin: 0 0 0.6rem 0;
-    color: #f8fafc;
+    color: var(--hero-text);
     letter-spacing: -0.02em;
   }
   
   .portfolio-hero p {
     font-size: 1.05rem;
-    color: #cbd5e1;
+    color: var(--hero-muted);
     margin: 0;
     line-height: 1.5;
   }
@@ -51,13 +51,13 @@ permalink: /portfolio/
   .stat-number {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #38bdf8;
+    color: var(--accent-soft);
     display: block;
   }
   
   .stat-label {
     font-size: 0.8rem;
-    color: #94a3b8;
+    color: var(--hero-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -67,8 +67,8 @@ permalink: /portfolio/
     font-weight: 700;
     margin: 2.8rem 0 1.2rem 0;
     padding-bottom: 0.6rem;
-    border-bottom: 2px solid #e2e8f0;
-    color: #0f172a;
+    border-bottom: 2px solid var(--border);
+    color: var(--text-strong);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -81,20 +81,20 @@ permalink: /portfolio/
   }
 
   .project-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.25s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow-sm);
     position: relative;
     overflow: hidden;
   }
 
   .project-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
-    border-color: #cbd5e1;
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-strong);
   }
 
   .project-card::before {
@@ -104,7 +104,7 @@ permalink: /portfolio/
     left: 0;
     width: 4px;
     height: 100%;
-    background: #3b82f6;
+    background: var(--accent);
   }
 
   .project-card.purple::before { background: #8b5cf6; }
@@ -124,7 +124,7 @@ permalink: /portfolio/
   .project-title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-strong);
     margin: 0;
   }
 
@@ -133,13 +133,13 @@ permalink: /portfolio/
     font-weight: 600;
     padding: 0.2rem 0.6rem;
     border-radius: 9999px;
-    background: #f1f5f9;
-    color: #475569;
-    border: 1px solid #e2e8f0;
+    background: var(--surface-sunken);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
   }
 
   .project-desc {
-    color: #475569;
+    color: var(--text);
     font-size: 0.95rem;
     margin-bottom: 1rem;
     line-height: 1.6;
@@ -149,7 +149,7 @@ permalink: /portfolio/
     margin: 0 0 1rem 0;
     padding-left: 1.2rem;
     font-size: 0.9rem;
-    color: #475569;
+    color: var(--text);
   }
 
   .feature-list li {
@@ -167,10 +167,10 @@ permalink: /portfolio/
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.2rem 0.55rem;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
     border-radius: 6px;
-    color: #334155;
+    color: var(--text);
   }
 
   .project-links {
@@ -185,7 +185,7 @@ permalink: /portfolio/
     align-items: center;
     gap: 0.3rem;
     font-weight: 600;
-    color: #2563eb;
+    color: var(--link);
     text-decoration: none;
   }
 
@@ -201,8 +201,8 @@ permalink: /portfolio/
   }
 
   .skill-block {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1.2rem;
   }
@@ -210,14 +210,14 @@ permalink: /portfolio/
   .skill-block-title {
     font-weight: 700;
     font-size: 1rem;
-    color: #0f172a;
+    color: var(--text-strong);
     margin-bottom: 0.5rem;
     display: block;
   }
 
   .skill-block-desc {
     font-size: 0.85rem;
-    color: #64748b;
+    color: var(--text-muted);
     line-height: 1.5;
   }
 </style>
