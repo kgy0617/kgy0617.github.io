@@ -4,27 +4,13 @@
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing this file very often, consider using Jekyll's data files
 # feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
-title: Memento mori
+title: "Giyong Kim | AI & Central Banking Engineering"
 email: www.linkedin.com/in/giyong-kim-503522139
-description: >- # this means to ignore newlines until "baseurl:"
-  "AI engineering, data systems, and economic analysis — notes and projects by kgy0617."
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kgy0617.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
+description: >-
+  AI engineering, multi-agent simulation systems, central banking software, and empirical econometric analysis — research and projects by Giyong Kim.
+baseurl: ""
+url: "https://kgy0617.github.io"
 github_username: kgy0617
 
 # Build settings
@@ -34,32 +20,23 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Google AdSense
-# google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX"
-
-# Top navigation: if these pages exist they'll be shown in the header
+# Top navigation: pages shown in the header
 header_pages:
   - portfolio.md
+  - ai-dev.md
   - categories.md
   - years.md
-  - about.md
+  - about.markdown
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

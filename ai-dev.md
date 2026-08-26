@@ -4,49 +4,73 @@ title: AI Development
 permalink: /ai-dev/
 ---
 
-# AI Development Journey
+# AI & Multi-Agent Systems Architecture
 
-This section documents my experience developing AI systems, language models, and intelligent applications across various domains.
-
-## Recent Projects
-
-### Data Production Value & Data-Intensity Measurement
-- **Focus**: Measuring Korea's data production value and data-intensity in occupations using NLP and LLMs
-- **Technologies**: Python, NLP, GPT-4, Gemini, LLMs, Spark
-- **Key Findings**: LLM-based approaches significantly outperform dictionary-based methods for Korean language analysis
-- **Status**: Active research and development
-
-### Economic Statistics System (ECOS) Modernization
-- **Focus**: Migration and modernization of statistical systems
-- **Technologies**: Python, Java, Oracle, Kubernetes
-- **Achievements**: Automated statistical pipeline development, cloud infrastructure deployment
-- **Status**: Ongoing
-
-## Technical Stack
-
-### Languages & Frameworks
-- **Python**: Primary language for data processing, ML pipelines, and LLM applications
-- **Java**: Backend development and system architecture
-- **SQL**: Data management and analysis
-
-### AI & ML
-- **Large Language Models**: GPT-4, Gemini, Qwen, Gemma
-- **NLP Techniques**: Text processing, morphological analysis, semantic understanding
-- **Data Processing**: Spark for large-scale distributed processing
-
-### Infrastructure
-- **Cloud**: Kubernetes, Docker containerization
-- **Databases**: Oracle, PostgreSQL
-- **DevOps**: Version control, CI/CD pipelines
-
-## Learning & Development
-
-I continuously explore emerging AI technologies and methodologies:
-- Prompt engineering and few-shot learning techniques
-- Model evaluation and performance optimization
-- Ethical AI and responsible development practices
-- Integration of AI into economic analysis and policy
+This section documents the technical principles, system architectures, and engineering methodologies behind our production-grade AI applications and simulation systems in economics and central banking.
 
 ---
 
-For detailed posts and case studies, check the [Blog](/posts/) section.
+## 🏛️ System Paradigms
+
+```mermaid
+graph TD
+    subgraph DL["Data Layer"]
+        D1["Raw Financial News - 4,800+ Articles / Day"]
+        D2["Macro Indicators and Beige Book - CPI, Unemployment, Fed Minutes"]
+        D3["Nemotron-Personas-Korea - 1M+ Stratified Household Profiles"]
+    end
+
+    subgraph AOL["Agentic Orchestration Layer"]
+        A1["Hierarchical Gate and Expert Routing - EPU Pipeline"]
+        A2["Multi-Perspective Deliberative Council - FOMC Agent Council"]
+        A3["Stratified Micro-Survey Simulation - Agent CSI"]
+    end
+
+    subgraph EAL["Evaluation and Alignment Layer"]
+        E1["kNN + BM25 RRF Dynamic Few-Shot"]
+        E2["Empirical Time-Series Alignment - MAE, Bias, Corr"]
+        E3["Causal Shock Graph Validation"]
+    end
+
+    D1 --> A1 --> E1
+    D2 --> A2 --> E2
+    D3 --> A3 --> E3
+```
+
+---
+
+## 🔬 Core AI Engineering Methodologies
+
+### 1. Two-Stage Gate Routing with False Negative Shields (EPU Pipeline)
+* **High-Recall First Stage**: When classifying rare and critical policy events, early false negatives cannot be recovered downstream. We employ high-capacity lightweight models (`gemma-4-26b` with $k=8$) and custom false negative shielding (`FN Shield v2`) to achieve $0.893 \sim 0.933$ recall.
+* **Specialized Expert Second Stage**: Specialized domain agents (`macro`, `market`, `policy`, `corporate`, `geo`) leverage `qwen3.6-27b` with dynamic few-shot retrieval combining dense semantic similarity ($k\text{NN}$) and sparse lexical matching ($\text{BM25}$) via Reciprocal Rank Fusion (RRF).
+
+### 2. Causal Shock Injection & Memory Preservation (Agent CSI)
+* **Stratified Agent Populations**: Representing macroeconomic sentiment requires heterogeneous agents. We stratify 2,500 agents along demographic dimensions (age, income, region, occupation).
+* **Causal Transmission Pathways**: Macroeconomic shocks are injected via a structural graph ($\text{Shock} \rightarrow \text{Mediator} \rightarrow \text{Survey Item}$), converting real-time economic indicators (CPI z-scores, rate changes, daily news summaries) into contextualized agent responses.
+* **Self-Referential Memory**: Preserving past survey responses to maintain temporal continuity and realistic sentiment persistence across time.
+
+### 3. Multi-Agent Deliberation & Precedent RAG (FOMC Agent Council)
+* **Deliberative Polarization**: Simulating monetary policy committee dynamics by giving distinct ideological mandates (Hawkish vs. Dovish) anchored by a consensus-seeking Centrist Chair.
+* **Hybrid RAG Precedent Engine**: Retrieving historical policy precedents and meeting minutes to anchor qualitative reasoning in institutional memory.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies & Tools |
+|---|---|
+| **Foundation Models** | Gemma-4 (26B), Qwen-3.6 (27B/35B), GPT-4o, Claude 3.5 Sonnet, Nemotron |
+| **Agent Frameworks** | LangGraph, Custom Hierarchical Routers, Multi-Agent Council Protocols |
+| **Retrieval & RAG** | kNN Dense Vector Embeddings, BM25 Lexical Search, Reciprocal Rank Fusion (RRF), FAISS |
+| **Distributed Processing** | PySpark, Python 3.11+, Celery, Multiprocessing concurrency |
+| **Evaluation Metrics** | Macro/Micro F1, Time-Series Pearson Correlation, Mean Absolute Error (MAE), Bias Decomposition |
+
+---
+
+## 📖 Deep-Dive Articles
+
+* 🚀 [EPU: Hierarchical 2-Stage Multi-Agent Classification Pipeline](/ai/data/2026/08/15/epu-multi-agent-classification-pipeline.html)
+* 🧠 [Agent CSI: Simulating Central Bank Consumer Surveys with 2,500 LLM Agents](/ai/economics/2026/08/08/agent-csi-llm-consumer-sentiment-simulation.html)
+* 🏛️ [FOMC Agent Council: Multi-Agent Monetary Policy Deliberation](/ai/economics/2026/02/20/fomc-agent-council-monetary-policy-simulation.html)
+* 📰 [Central Bank News Analysis System Architecture](/ai/data/2025/11/23/news-analysis-system.html)
