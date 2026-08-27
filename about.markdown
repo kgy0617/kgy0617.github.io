@@ -6,37 +6,20 @@ permalink: /about/
 
 # About Me
 
-I am a Data & AI Engineer and Empirical Researcher specializing in the intersection of **Artificial Intelligence, Central Banking Systems, and Econometrics**. 
+I am a Data & AI Engineer and Empirical Researcher working at the intersection of
+**artificial intelligence, central banking systems, and econometrics**.
 
-My work focuses on designing autonomous multi-agent simulation frameworks for macroeconomic indicators, modernizing national statistical infrastructure, and extracting structural economic signals from massive text datasets.
+My work runs along three lines:
 
----
+* **Multi-agent LLM systems** for macroeconomic measurement and simulation — and, just as often,
+  for diagnosing where those systems quietly fail.
+* **Central banking software**, modernizing the statistical infrastructure that national
+  institutions run on.
+* **Empirical econometrics** — time-series estimation, seasonal adjustment, and text-based
+  measurement of economic activity.
 
-## 🏛️ What I Do
-
-### 1. LLM & Multi-Agent Intelligence
-* **Economic Policy Uncertainty (EPU)**: Architected a two-stage hierarchical multi-agent classification pipeline (Gate Agent + 5 Expert Agents) with dynamic few-shot retrieval (kNN + BM25 RRF).
-* **Agent CSI**: Developed a full-scale LLM simulation of the Bank of Korea’s Consumer Sentiment Survey with 2,500 stratified household personas, causal shock graphs, and empirical alignment validation.
-* **FOMC Agent Council**: Modeled monetary policy deliberation and rate-setting via multi-agent debate (Hawk, Dove, Chair) and RAG over historical FOMC records and the Beige Book — and diagnosed its **Hold bias** failure mode (TrustNLP 2026).
-* **Central Bank News Analysis**: Built distributed multi-agent pipelines for clustering, sentiment extraction, and real-time macro signal tracking from financial media.
-
-### 2. Central Banking & Data Systems
-* **BOK-X-13 Web Modernization**: Re-architected the Bank of Korea's legacy desktop seasonal adjustment software (`BOK-X-13ARIMA-SEATS` in Java/JavaFX) into a containerized Python/Flask web platform.
-* **ECOS Modernization**: Modernized national economic statistical architectures, migrating legacy batch workflows to Python, Oracle, and Kubernetes.
-* **Distributed Text Pipelines**: Daily processing of thousands of news and economic documents using PySpark, LangGraph, and cloud infrastructure.
-
-### 3. Empirical Econometrics & Labor Market Research
-* **Data Production Value & Occupational Data-Intensity**: Quantified Korea’s data asset value and occupational data-intensiveness using NLP text-mining over job vacancy postings under the OECD framework.
-* **Causal Inference & Time-Series Modeling**: Empirical time-series analysis, seasonal decomposition, and structural econometric estimation.
-
----
-
-## 🛠️ Core Technical Stack
-
-* **AI & Multi-Agent**: Gemma-4, Qwen-3.6, Nemotron-Personas, GPT-4o, Claude, LangGraph, RAG, Few-Shot Dynamic Mining
-* **Languages & Backends**: Python (Flask, FastAPI, PySpark, PyTorch), Java, SQL
-* **Data & Infrastructure**: Oracle, PostgreSQL, Docker, Kubernetes, Git / GitHub Actions
-* **Statistical & Econometric Tools**: X-13ARIMA-SEATS, Stata, R, spaCy, Kiwi
+Individual systems are written up in the [portfolio](/portfolio/), with the architectures and
+methodologies behind them in [AI Development](/ai-dev/).
 
 ---
 
@@ -49,8 +32,7 @@ My work focuses on designing autonomous multi-agent simulation frameworks for ma
 
 ---
 
-## 📑 Explore Further
+## ✉️ Contact
 
-* 📁 **[Portfolio](/portfolio/)**: Interactive showcase of core systems and research projects
-* 🤖 **[AI Development](/ai-dev/)**: Technical architecture deep-dives and engineering notes
-* 🗂️ **[Archive](/archive/)**: Every article by year, filterable by topic
+* **LinkedIn** — [giyong-kim](https://www.linkedin.com/in/giyong-kim-503522139)
+* **GitHub** — [kgy0617](https://github.com/kgy0617)

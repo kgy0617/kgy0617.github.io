@@ -501,16 +501,24 @@ permalink: /portfolio/
 
   <div class="skills-container">
     <div class="skill-block">
-      <span class="skill-block-title">AI & LLM Multi-Agent</span>
-      <span class="skill-block-desc">Multi-Agent Architectures, Dynamic Few-Shot Mining, RAG, Gemma / Qwen / GPT / Nemotron, LangGraph, Prompt Engineering</span>
+      <span class="skill-block-title">AI &amp; Multi-Agent</span>
+      <span class="skill-block-desc">Gemma-4 (26B), Qwen-3.6 (27B/35B), GPT-4o, Claude, Nemotron-Personas · LangGraph, custom hierarchical routers, multi-agent council protocols, prompt engineering</span>
     </div>
     <div class="skill-block">
-      <span class="skill-block-title">Data & Software Engineering</span>
-      <span class="skill-block-desc">Python (Flask / FastAPI), PySpark, Java, Oracle SQL, Docker, Kubernetes, Legacy System Modernization</span>
+      <span class="skill-block-title">Retrieval &amp; RAG</span>
+      <span class="skill-block-desc">kNN dense vector embeddings, BM25 lexical search, Reciprocal Rank Fusion (RRF), FAISS, dynamic few-shot mining</span>
     </div>
     <div class="skill-block">
-      <span class="skill-block-title">Econometrics & Time Series</span>
-      <span class="skill-block-desc">X-13ARIMA-SEATS, Seasonal Adjustment, Causal Inference, Monetary Policy Modeling, Survey Simulation</span>
+      <span class="skill-block-title">Languages &amp; Backends</span>
+      <span class="skill-block-desc">Python (Flask, FastAPI, PyTorch), Java, SQL</span>
+    </div>
+    <div class="skill-block">
+      <span class="skill-block-title">Data &amp; Infrastructure</span>
+      <span class="skill-block-desc">PySpark, Celery, Oracle, PostgreSQL, Docker, Kubernetes, Git / GitHub Actions, legacy system modernization</span>
+    </div>
+    <div class="skill-block">
+      <span class="skill-block-title">Econometrics &amp; Evaluation</span>
+      <span class="skill-block-desc">X-13ARIMA-SEATS, seasonal adjustment, causal inference, survey simulation, Stata, R, Kiwi, spaCy · Macro/Micro F1, Pearson correlation, MAE, bias decomposition</span>
     </div>
   </div>
 

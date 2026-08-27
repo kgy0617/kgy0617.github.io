@@ -55,20 +55,6 @@ graph TD
 * **Hybrid RAG Precedent Engine**: Retrieving historical policy precedents and meeting minutes to anchor qualitative reasoning in institutional memory.
 * **Negative Result — Deliberation Is Not Enough**: Evaluated against strictly time-consistent vintage data, committee-style debate did *not* beat a single-LLM baseline. All models exhibited **Hold bias** — over-predicting Hold and resisting Cut through easing cycles — and debate/consensus aggregation amplified that caution instead of correcting it. Published at [TrustNLP 2026](https://aclanthology.org/2026.trustnlp-main.52/).
 
----
-
-## 🛠️ Technology Stack
-
-| Layer | Technologies & Tools |
-|---|---|
-| **Foundation Models** | Gemma-4 (26B), Qwen-3.6 (27B/35B), GPT-4o, Claude 3.5 Sonnet, Nemotron |
-| **Agent Frameworks** | LangGraph, Custom Hierarchical Routers, Multi-Agent Council Protocols |
-| **Retrieval & RAG** | kNN Dense Vector Embeddings, BM25 Lexical Search, Reciprocal Rank Fusion (RRF), FAISS |
-| **Distributed Processing** | PySpark, Python 3.11+, Celery, Multiprocessing concurrency |
-| **Evaluation Metrics** | Macro/Micro F1, Time-Series Pearson Correlation, Mean Absolute Error (MAE), Bias Decomposition |
-
----
-
 ## 📖 Deep-Dive Articles
 
 * 🚀 [EPU: Hierarchical 2-Stage Multi-Agent Classification Pipeline](/ai/data/2026/08/15/epu-multi-agent-classification-pipeline.html)
