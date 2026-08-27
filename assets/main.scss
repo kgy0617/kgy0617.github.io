@@ -490,3 +490,226 @@
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
+
+
+/* --------------------------------------------------------------------------
+   Portfolio page
+   Moved out of portfolio.md so every page's styling lives in one file and
+   shares the tokens above.
+   -------------------------------------------------------------------------- */
+
+.portfolio-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.portfolio-hero {
+  background: linear-gradient(135deg, var(--hero-from) 0%, var(--hero-to) 100%);
+  color: white;
+  padding: 2.2rem 1.8rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.portfolio-hero h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin: 0 0 0.6rem 0;
+  color: var(--hero-text);
+  letter-spacing: -0.02em;
+}
+
+.portfolio-hero p {
+  font-size: 1.05rem;
+  color: var(--hero-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-soft);
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--hero-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2.8rem 0 1.2rem 0;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--border);
+  color: var(--text-strong);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+}
+
+.project-card.purple::before { background: #8b5cf6; }
+.project-card.emerald::before { background: #10b981; }
+.project-card.amber::before { background: #f59e0b; }
+.project-card.rose::before { background: #f43f5e; }
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin: 0;
+}
+
+.project-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  background: var(--surface-sunken);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.project-desc {
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.feature-list {
+  margin: 0 0 1rem 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.feature-list li {
+  margin-bottom: 0.35rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.55rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  font-size: 0.85rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  color: var(--link);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.skill-block {
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.skill-block-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-strong);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.skill-block-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}

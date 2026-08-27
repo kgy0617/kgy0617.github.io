@@ -4,9 +4,7 @@ title: AI Development
 permalink: /ai-dev/
 ---
 
-# AI & Multi-Agent Systems Architecture
-
-This section documents the technical principles, system architectures, and engineering methodologies behind our production-grade AI applications and simulation systems in economics and central banking.
+Architecture and methodology notes behind the multi-agent systems I build for economics and central banking — including the parts that did not work.
 
 ---
 
@@ -42,11 +40,11 @@ graph TD
 ## 🔬 Core AI Engineering Methodologies
 
 ### 1. Two-Stage Gate Routing with False Negative Shields (EPU Pipeline)
-* **High-Recall First Stage**: When classifying rare and critical policy events, early false negatives cannot be recovered downstream. We employ high-capacity lightweight models (`gemma-4-26b` with $k=8$) and custom false negative shielding (`FN Shield v2`) to achieve $0.893 \sim 0.933$ recall.
+* **High-Recall First Stage**: When classifying rare and critical policy events, early false negatives cannot be recovered downstream. I use high-capacity lightweight models (`gemma-4-26b` with $k=8$) and custom false negative shielding (`FN Shield v2`) to achieve $0.893 \sim 0.933$ recall.
 * **Specialized Expert Second Stage**: Specialized domain agents (`macro`, `market`, `policy`, `corporate`, `geo`) leverage `qwen3.6-27b` with dynamic few-shot retrieval combining dense semantic similarity ($k\text{NN}$) and sparse lexical matching ($\text{BM25}$) via Reciprocal Rank Fusion (RRF).
 
 ### 2. Causal Shock Injection & Memory Preservation (Agent CSI)
-* **Stratified Agent Populations**: Representing macroeconomic sentiment requires heterogeneous agents. We stratify 2,500 agents along demographic dimensions (age, income, region, occupation).
+* **Stratified Agent Populations**: Representing macroeconomic sentiment requires heterogeneous agents. The population is stratified across 2,500 agents along demographic dimensions (age, income, region, occupation).
 * **Causal Transmission Pathways**: Macroeconomic shocks are injected via a structural graph ($\text{Shock} \rightarrow \text{Mediator} \rightarrow \text{Survey Item}$), converting real-time economic indicators (CPI z-scores, rate changes, daily news summaries) into contextualized agent responses.
 * **Self-Referential Memory**: Preserving past survey responses to maintain temporal continuity and realistic sentiment persistence across time.
 
@@ -61,3 +59,5 @@ graph TD
 * 🧠 [Agent CSI: Simulating Central Bank Consumer Surveys with 2,500 LLM Agents](/ai/economics/2026/08/08/agent-csi-llm-consumer-sentiment-simulation.html)
 * 🏛️ [FOMC Agent Council: Multi-Agent Monetary Policy Deliberation](/ai/economics/2026/02/20/fomc-agent-council-monetary-policy-simulation.html) — published at [TrustNLP 2026](https://aclanthology.org/2026.trustnlp-main.52/)
 * 📰 [Central Bank News Analysis System Architecture](/ai/data/2025/11/23/news-analysis-system.html)
+
+Every article, including the econometrics write-ups, is in the [archive](/archive/).

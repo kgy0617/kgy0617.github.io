@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-# About Me
-
 I am a Data & AI Engineer and Empirical Researcher working at the intersection of
 **artificial intelligence, central banking systems, and econometrics**.
 
