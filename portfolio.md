@@ -343,7 +343,7 @@ permalink: /portfolio/
         <span class="project-badge">Lead Engineer</span>
       </div>
       <p class="project-desc">
-        End-to-end distributed NLP and multi-agent pipeline for clustering, sentiment scoring, and macro signal extraction from millions of daily financial news articles.
+        End-to-end distributed NLP and multi-agent pipeline for clustering, sentiment scoring, and macro signal extraction from thousands of financial news articles per day.
       </p>
       <div class="tech-tags">
         <span class="tech-tag">PySpark</span>

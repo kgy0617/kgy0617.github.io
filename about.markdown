@@ -23,7 +23,7 @@ My work focuses on designing autonomous multi-agent simulation frameworks for ma
 ### 2. Central Banking & Data Systems
 * **BOK-X-13 Web Modernization**: Re-architected the Bank of Korea's legacy desktop seasonal adjustment software (`BOK-X-13ARIMA-SEATS` in Java/JavaFX) into a containerized Python/Flask web platform.
 * **ECOS Modernization**: Modernized national economic statistical architectures, migrating legacy batch workflows to Python, Oracle, and Kubernetes.
-* **Distributed Text Pipelines**: Processed millions of news and economic documents using PySpark, LangGraph, and cloud infrastructure.
+* **Distributed Text Pipelines**: Daily processing of thousands of news and economic documents using PySpark, LangGraph, and cloud infrastructure.
 
 ### 3. Empirical Econometrics & Labor Market Research
 * **Data Production Value & Occupational Data-Intensity**: Quantified Korea’s data asset value and occupational data-intensiveness using NLP text-mining over job vacancy postings under the OECD framework.
