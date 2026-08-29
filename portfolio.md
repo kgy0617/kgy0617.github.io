@@ -12,25 +12,6 @@ hide_title: true
   <div class="portfolio-hero">
     <h1>Giyong Kim — AI & Data Engineering Portfolio</h1>
     <p>Designing intelligent multi-agent systems, central bank statistical platforms, and empirical econometric models.</p>
-    
-    <div class="stats-row">
-      <div class="stat-box">
-        <span class="stat-number">7</span>
-        <span class="stat-label">Core Systems</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number">2,500+</span>
-        <span class="stat-label">Agent Personas</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number">0.767–0.808</span>
-        <span class="stat-label">Expert Agent F1</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number">ACL 2026</span>
-        <span class="stat-label">Peer-Reviewed</span>
-      </div>
-    </div>
   </div>
 
   <!-- SECTION 1: LLM & Multi-Agent Systems -->

@@ -528,33 +528,6 @@
   line-height: 1.5;
 }
 
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.stat-box {
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--accent-soft);
-  display: block;
-}
-
-.stat-label {
-  font-size: 0.8rem;
-  color: var(--hero-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 .section-heading {
   font-size: 1.4rem;
   font-weight: 700;
