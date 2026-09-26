@@ -174,6 +174,34 @@ hide_title: true
       </div>
     </div>
 
+    <!-- Project 7: Global Economic Statistical MCP (grew out of ECOS MCP) -->
+    <div class="project-card amber">
+      <div class="project-header">
+        <h3 class="project-title">Global Economic Statistical MCP — Official Macro Statistics for LLMs</h3>
+        <span class="project-badge">Author / Open Source</span>
+      </div>
+      <p class="project-desc">
+        An MCP server that lets an LLM ask for a macroeconomic <em>concept</em> (policy rate, CPI inflation, real GDP, current account, …) for an economy, fetches it from the right institution — Bank of Korea ECOS, OECD, IMF, BIS, ECB, Eurostat or the World Bank — and returns one canonical time-series format with its source cited.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Concept → Provider Resolution</strong>: 31 concepts mapped across 7 institutions through the ECOS REST API, a shared SDMX layer (OECD, IMF, BIS, ECB, Eurostat) and World Bank Data360, exposed as 6 read-only tools.</li>
+        <li><strong>Cross-Institution Validation</strong>: Every series is checked for country, frequency, unit, scale, period, gaps, duplicates and revisions; cross-validation compares institutions period by period and labels each pair MATCH, DIFFER (known cause) or UNRESOLVED — reported, never hidden. Latest run over six economies: 43 MATCH · 3 DIFFER · 15 UNRESOLVED of 62 pairs.</li>
+        <li><strong>Provenance</strong>: Each response carries institution, dataset, series key, retrieval time, query URL, applied transformations and a ready-to-use citation.</li>
+        <li><strong>Origin — ECOS MCP</strong>: Began as a Bank of Korea ECOS server with one-call presets for headline indicators, a local table index for search, and a compact output format that cuts a 24-month CPI response from 6,545 to 605 characters.</li>
+      </ul>
+      <div class="tech-tags">
+        <span class="tech-tag">Model Context Protocol</span>
+        <span class="tech-tag">SDMX</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Cross-Validation</span>
+        <span class="tech-tag">Official Statistics</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://github.com/kgy0617/global-economic-statistical-mcp" target="_blank" rel="noopener">GitHub →</a>
+        <a class="project-link" href="https://github.com/kgy0617/ecos_mcp" target="_blank" rel="noopener">ECOS MCP on GitHub →</a>
+      </div>
+    </div>
+
   </div>
 
   <!-- SECTION 3: Research & Applied Econometrics -->
@@ -183,7 +211,7 @@ hide_title: true
 
   <div class="project-grid">
 
-    <!-- Project 7: Data Production Value & Occupational Intensity -->
+    <!-- Project 8: Data Production Value & Occupational Intensity -->
     <div class="project-card purple">
       <div class="project-header">
         <h3 class="project-title">Measuring Korea’s Data Production Value and Occupational Data Intensity</h3>
@@ -267,7 +295,7 @@ hide_title: true
   <div class="skills-container">
     <div class="skill-block">
       <span class="skill-block-title">AI &amp; Multi-Agent</span>
-      <span class="skill-block-desc">Gemma-4 (26B), Qwen-3.6 (27B/35B), GPT-4o, Claude, Nemotron-Personas · LangGraph, custom hierarchical routers, multi-agent council protocols, prompt engineering</span>
+      <span class="skill-block-desc">Gemma-4 (26B), Qwen-3.6 (27B/35B), GPT-4o, Claude, Nemotron-Personas · LangGraph, MCP servers, custom hierarchical routers, multi-agent council protocols, prompt engineering</span>
     </div>
     <div class="skill-block">
       <span class="skill-block-title">Retrieval &amp; RAG</span>
@@ -279,7 +307,7 @@ hide_title: true
     </div>
     <div class="skill-block">
       <span class="skill-block-title">Data &amp; Infrastructure</span>
-      <span class="skill-block-desc">PySpark, Celery, Oracle, PostgreSQL, Docker, Kubernetes, Git / GitHub Actions, legacy system modernization</span>
+      <span class="skill-block-desc">PySpark, Celery, Oracle, PostgreSQL, SDMX, Docker, Kubernetes, Git / GitHub Actions, legacy system modernization</span>
     </div>
     <div class="skill-block">
       <span class="skill-block-title">Econometrics &amp; Evaluation</span>
