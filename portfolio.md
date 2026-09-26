@@ -123,14 +123,75 @@ hide_title: true
 
   </div>
 
-  <!-- SECTION 2: Central Banking & Economic Systems -->
+  <!-- SECTION 2: LLM Data Infrastructure (MCP servers) -->
   <div class="section-heading">
-    <span>🏛️</span> 2. Central Banking & Statistical Software Modernization
+    <span>🔌</span> 2. LLM Data Infrastructure — MCP Servers
   </div>
 
   <div class="project-grid">
 
-    <!-- Project 5: BOK-X-13 Web -->
+    <!-- Project 5: Global Economic Statistical MCP -->
+    <div class="project-card amber">
+      <div class="project-header">
+        <h3 class="project-title">Global Economic Statistical MCP — Official Macro Statistics for LLMs</h3>
+        <span class="project-badge">Author / Open Source</span>
+      </div>
+      <p class="project-desc">
+        An MCP server that lets an LLM ask for a macroeconomic <em>concept</em> (policy rate, CPI inflation, real GDP, current account, …) for an economy, fetches it from the right institution — Bank of Korea ECOS, OECD, IMF, BIS, ECB, Eurostat or the World Bank — and returns one canonical time-series format with its source cited.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Concept → Provider Resolution</strong>: 31 concepts mapped across 7 institutions through the ECOS REST API, a shared SDMX layer (OECD, IMF, BIS, ECB, Eurostat) and World Bank Data360, exposed as 6 read-only tools.</li>
+        <li><strong>Cross-Institution Validation</strong>: Every series is checked for country, frequency, unit, scale, period, gaps, duplicates and revisions; cross-validation compares institutions period by period and labels each pair MATCH, DIFFER (known cause) or UNRESOLVED — reported, never hidden. Latest run over six economies: 43 MATCH · 3 DIFFER · 15 UNRESOLVED of 62 pairs.</li>
+        <li><strong>Provenance</strong>: Each response carries institution, dataset, series key, retrieval time, query URL, applied transformations and a ready-to-use citation.</li>
+      </ul>
+      <div class="tech-tags">
+        <span class="tech-tag">Model Context Protocol</span>
+        <span class="tech-tag">SDMX</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Cross-Validation</span>
+        <span class="tech-tag">Official Statistics</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://github.com/kgy0617/global-economic-statistical-mcp" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <!-- Project 6: ECOS MCP -->
+    <div class="project-card emerald">
+      <div class="project-header">
+        <h3 class="project-title">ECOS MCP — Bank of Korea Statistics for AI Agents</h3>
+        <span class="project-badge">Author / Open Source</span>
+      </div>
+      <p class="project-desc">
+        An MCP server for the Bank of Korea's Economic Statistics System (ECOS) Open API, letting AI agents such as Claude and Cursor search Korean macroeconomic statistics in natural language and pull time series in a token-efficient form. It is the Korea-only server the Global Economic Statistical MCP grew out of.
+      </p>
+      <ul class="feature-list">
+        <li><strong>One-Call Indicators</strong>: Presets map everyday keywords (기준금리, 성장률, 물가상승률, 환율, M2, …) to the right ECOS table and item, so headline indicators need no code lookup.</li>
+        <li><strong>Table Search</strong>: A local index of ECOS tables answers instantly, ignores spacing, ranks by relevance, and walks the classification tree.</li>
+        <li><strong>Token-Optimized Output</strong>: A compact format writes each series' name and unit once and values as <code>[period, value]</code> pairs, cutting a 24-month CPI response from 6,545 to 605 characters; year-on-year and period-on-period changes and change-points-only views are computed on the server.</li>
+      </ul>
+      <div class="tech-tags">
+        <span class="tech-tag">Model Context Protocol</span>
+        <span class="tech-tag">ECOS Open API</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Time Series</span>
+        <span class="tech-tag">Token Efficiency</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://github.com/kgy0617/ecos_mcp" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SECTION 3: Central Banking & Economic Systems -->
+  <div class="section-heading">
+    <span>🏛️</span> 3. Central Banking & Statistical Software Modernization
+  </div>
+
+  <div class="project-grid">
+
+    <!-- Project 7: BOK-X-13 Web -->
     <div class="project-card emerald">
       <div class="project-header">
         <h3 class="project-title">BOK-X-13 Web — Seasonal Adjustment Web Platform</h3>
@@ -156,7 +217,7 @@ hide_title: true
       </div>
     </div>
 
-    <!-- Project 6: ECOS Modernization -->
+    <!-- Project 8: ECOS Modernization -->
     <div class="project-card">
       <div class="project-header">
         <h3 class="project-title">Economic Statistics System (ECOS) Modernization</h3>
@@ -174,44 +235,16 @@ hide_title: true
       </div>
     </div>
 
-    <!-- Project 7: Global Economic Statistical MCP (grew out of ECOS MCP) -->
-    <div class="project-card amber">
-      <div class="project-header">
-        <h3 class="project-title">Global Economic Statistical MCP — Official Macro Statistics for LLMs</h3>
-        <span class="project-badge">Author / Open Source</span>
-      </div>
-      <p class="project-desc">
-        An MCP server that lets an LLM ask for a macroeconomic <em>concept</em> (policy rate, CPI inflation, real GDP, current account, …) for an economy, fetches it from the right institution — Bank of Korea ECOS, OECD, IMF, BIS, ECB, Eurostat or the World Bank — and returns one canonical time-series format with its source cited.
-      </p>
-      <ul class="feature-list">
-        <li><strong>Concept → Provider Resolution</strong>: 31 concepts mapped across 7 institutions through the ECOS REST API, a shared SDMX layer (OECD, IMF, BIS, ECB, Eurostat) and World Bank Data360, exposed as 6 read-only tools.</li>
-        <li><strong>Cross-Institution Validation</strong>: Every series is checked for country, frequency, unit, scale, period, gaps, duplicates and revisions; cross-validation compares institutions period by period and labels each pair MATCH, DIFFER (known cause) or UNRESOLVED — reported, never hidden. Latest run over six economies: 43 MATCH · 3 DIFFER · 15 UNRESOLVED of 62 pairs.</li>
-        <li><strong>Provenance</strong>: Each response carries institution, dataset, series key, retrieval time, query URL, applied transformations and a ready-to-use citation.</li>
-        <li><strong>Origin — ECOS MCP</strong>: Began as a Bank of Korea ECOS server with one-call presets for headline indicators, a local table index for search, and a compact output format that cuts a 24-month CPI response from 6,545 to 605 characters.</li>
-      </ul>
-      <div class="tech-tags">
-        <span class="tech-tag">Model Context Protocol</span>
-        <span class="tech-tag">SDMX</span>
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">Cross-Validation</span>
-        <span class="tech-tag">Official Statistics</span>
-      </div>
-      <div class="project-links">
-        <a class="project-link" href="https://github.com/kgy0617/global-economic-statistical-mcp" target="_blank" rel="noopener">GitHub →</a>
-        <a class="project-link" href="https://github.com/kgy0617/ecos_mcp" target="_blank" rel="noopener">ECOS MCP on GitHub →</a>
-      </div>
-    </div>
-
   </div>
 
-  <!-- SECTION 3: Research & Applied Econometrics -->
+  <!-- SECTION 4: Research & Applied Econometrics -->
   <div class="section-heading">
-    <span>📈</span> 3. Research & Applied Econometrics
+    <span>📈</span> 4. Research & Applied Econometrics
   </div>
 
   <div class="project-grid">
 
-    <!-- Project 8: Data Production Value & Occupational Intensity -->
+    <!-- Project 9: Data Production Value & Occupational Intensity -->
     <div class="project-card purple">
       <div class="project-header">
         <h3 class="project-title">Measuring Korea’s Data Production Value and Occupational Data Intensity</h3>
@@ -240,9 +273,9 @@ hide_title: true
 
   </div>
 
-  <!-- SECTION 4: Publications -->
+  <!-- SECTION 5: Publications -->
   <div class="section-heading">
-    <span>📚</span> 4. Publications
+    <span>📚</span> 5. Publications
   </div>
 
   <div class="pub-list">
@@ -287,9 +320,9 @@ hide_title: true
     </div>
   </div>
 
-  <!-- SECTION 5: Skills Matrix -->
+  <!-- SECTION 6: Skills Matrix -->
   <div class="section-heading">
-    <span>⚡</span> 5. Technical Competencies
+    <span>⚡</span> 6. Technical Competencies
   </div>
 
   <div class="skills-container">

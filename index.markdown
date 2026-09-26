@@ -113,4 +113,20 @@ layout: home
       </svg>
     </span>
   </a>
+
+  <a class="home-highlight highlight-emerald" href="https://github.com/kgy0617/global-economic-statistical-mcp" target="_blank" rel="noopener">
+    <div class="home-highlight-top">
+      <span class="home-highlight-kicker">LLM Data Infrastructure</span>
+      <span class="home-highlight-pill">MCP Server</span>
+    </div>
+    <span class="home-highlight-title">Global Economic Statistical MCP</span>
+    <span class="home-highlight-desc">Official macro statistics for LLMs from 7 institutions — Bank of Korea, OECD, IMF, BIS, ECB, Eurostat, World Bank — cross-validated and cited. Grew out of the Korea-only ECOS MCP.</span>
+    <span class="home-highlight-cta">
+      <span>View on GitHub</span>
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="2" y1="8" x2="12" y2="8"></line>
+        <polyline points="8 4 12 8 8 12"></polyline>
+      </svg>
+    </span>
+  </a>
 </div>
