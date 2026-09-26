@@ -3,6 +3,7 @@ layout: post
 title:  "News Analysis System"
 date:   2025-11-23 22:00:00 +0900
 categories: ai data
+description: "일일 수천 건의 경제·금융 뉴스 기사를 수집하여 실시간 거시경제 지표 및 시장 감성을 모니터링하는 뉴스 분석 시스템 대시보드."
 ---
 
 <style>

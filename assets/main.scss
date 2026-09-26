@@ -103,6 +103,23 @@
     --cat-economics-fg: #6ee7b7;  --cat-economics-bg: rgba(16, 185, 129, 0.2);
     --cat-software-fg:  #fcd34d;  --cat-software-bg:  rgba(245, 158, 11, 0.2);
   }
+
+  /* Dark mode overrides for code blocks & syntax highlighting */
+  pre, code {
+    background-color: var(--surface-sunken) !important;
+    border-color: var(--border) !important;
+    color: var(--text) !important;
+  }
+
+  .highlight,
+  .highlighter-rouge .highlight {
+    background: var(--surface-sunken) !important;
+    color: var(--text) !important;
+  }
+
+  .highlight .c, .highlight .c1, .highlight .cm {
+    color: var(--text-muted) !important;
+  }
 }
 
 /* ==========================================================================
@@ -1386,6 +1403,21 @@ pre > code {
   font-size: 0.92rem;
   line-height: 1.65;
   color: var(--text);
+}
+
+.pub-status {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: 9999px;
+  background: var(--cat-software-bg);
+  color: var(--cat-software-fg);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 /* ==========================================================================

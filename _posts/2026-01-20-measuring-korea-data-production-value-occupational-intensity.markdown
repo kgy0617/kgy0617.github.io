@@ -3,13 +3,14 @@ layout: post
 title:  "Measuring Korea’s Data Production Value and Occupational Data-Intensity"
 date:   2026-01-20 10:00:00 +0900
 categories: economics data
+description: "비용·산출 접근법을 통한 한국의 데이터 생산가치 추정과 대규모 온라인 채용공고 NLP 분석을 통한 직업별 데이터 집약도 실증 측정 연구."
 ---
 
 > **📄 후속 연구가 학회에 채택되었습니다**
 >
 > Giyong Kim, Sojung Kim. *Anchor-and-Verify LLM Cascades for Economic Measurement of
 > Data-Intensive Work from Online Job Postings.* IEEE Computational Intelligence in
-> Financial Engineering and Economics (CIFEr 2026), Tokyo, 2026년 9월. **채택 — 발표 예정.**
+> Financial Engineering and Economics (CIFEr 2026), Tokyo, 2026년 9월. **채택 및 발표 완료.**
 >
 > [채택 논문 목록](https://cifer2026.mhirano.jp/accepted_papers)
 >

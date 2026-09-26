@@ -3,6 +3,7 @@ layout: post
 title:  "FOMC Agent Council: Simulating Monetary Policy Deliberation with Multi-Agent Systems"
 date:   2026-02-20 16:00:00 +0900
 categories: ai economics
+description: "FOMC 위원회 다자 토론을 모사하는 멀티에이전트 시스템을 구축하고, 의사결정 시뮬레이션에서 나타나는 Hold 편향과 한계를 진단한 실증 분석."
 ---
 
 > **📄 이 연구는 논문으로 게재되었습니다**

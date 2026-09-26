@@ -41,7 +41,7 @@ layout: home
             <span class="home-paper-title">Anchor-and-Verify LLM Cascades for Economic Measurement of Data-Intensive Work</span>
             <span class="home-paper-venue">
               IEEE CIFEr 2026
-              <span class="home-paper-status">Accepted</span>
+              <span class="home-paper-status">Presented</span>
             </span>
           </div>
           <svg class="home-paper-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

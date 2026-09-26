@@ -3,6 +3,7 @@ layout: post
 title:  "BOK-X-13: Modernizing Central Bank Seasonal Adjustment Software to a Web Platform"
 date:   2026-04-05 14:00:00 +0900
 categories: economics software
+description: "한국은행의 Java/JavaFX 기반 BOK-X-13 계절변동조정 데스크톱 소프트웨어를 컨테이너형 Python Flask 웹 플랫폼으로 전면 현대화한 아키텍처."
 ---
 
 ## 1. 배경: 계절변동조정(Seasonal Adjustment)과 BOK-X-13

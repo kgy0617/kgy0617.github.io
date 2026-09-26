@@ -52,9 +52,10 @@ layout: default
             <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           </h3>
 
-          {%- if post.excerpt -%}
+          {%- assign post_summary = post.description | default: post.excerpt -%}
+          {%- if post_summary -%}
           <div class="post-card-excerpt">
-            {{ post.excerpt | strip_html | truncatewords: 32 }}
+            {{ post_summary | strip_html | truncatewords: 32 }}
           </div>
           {%- endif -%}
 

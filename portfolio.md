@@ -273,7 +273,7 @@ hide_title: true
       <p class="pub-venue">
         IEEE Computational Intelligence in Financial Engineering and Economics (CIFEr 2026)
         · Tokyo, Japan · September 2026
-        <span class="pub-status">Accepted — to be presented</span>
+        <span class="pub-status">Presented</span>
       </p>
       <p class="pub-abstract">
         Applies an anchor-and-verify LLM cascade to measuring data-intensive work from

@@ -35,13 +35,10 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 
-    <!-- Mermaid for diagrams (all layouts) -->
+    {%- if page.url == '/ai-dev/' or content contains 'mermaid' or page.mermaid -%}
+    <!-- Mermaid for diagrams (loaded only on pages with diagrams) -->
     <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-
     <script>
-        // Deferred scripts run in order and finish before DOMContentLoaded, so both
-        // `mermaid` and `renderMathInElement` are guaranteed to exist here. Mermaid
-        // converts its code blocks first, then KaTeX renders everything except them.
         document.addEventListener("DOMContentLoaded", function () {
             if (window.mermaid) {
                 mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
@@ -56,6 +53,12 @@
                 });
                 mermaid.run();
             }
+        });
+    </script>
+    {%- endif -%}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
             if (window.renderMathInElement) {
                 renderMathInElement(document.body, {

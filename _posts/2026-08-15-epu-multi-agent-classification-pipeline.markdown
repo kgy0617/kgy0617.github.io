@@ -3,6 +3,7 @@ layout: post
 title:  "EPU: Hierarchical 2-Stage Multi-Agent Classification Pipeline"
 date:   2026-08-15 10:00:00 +0900
 categories: ai data
+description: "한국 경제기사를 5개 차원(Macro, Market, Policy, Corporate, Geo)의 정책 불확실성으로 분류하는 2단계 Gate + 5 Expert 다중 에이전트 파이프라인 구축기."
 ---
 
 ## 1. 개요 (Overview)
