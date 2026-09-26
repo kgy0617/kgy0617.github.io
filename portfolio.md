@@ -152,6 +152,7 @@ hide_title: true
         <span class="tech-tag">Official Statistics</span>
       </div>
       <div class="project-links">
+        <a class="project-link" href="/ai/data/2026/09/26/global-economic-statistical-mcp.html">Read Deep-Dive Article →</a>
         <a class="project-link" href="https://github.com/kgy0617/global-economic-statistical-mcp" target="_blank" rel="noopener">GitHub →</a>
       </div>
     </div>
@@ -178,6 +179,7 @@ hide_title: true
         <span class="tech-tag">Token Efficiency</span>
       </div>
       <div class="project-links">
+        <a class="project-link" href="/ai/data/2026/09/26/global-economic-statistical-mcp.html">Read Deep-Dive Article →</a>
         <a class="project-link" href="https://github.com/kgy0617/ecos_mcp" target="_blank" rel="noopener">GitHub →</a>
       </div>
     </div>
