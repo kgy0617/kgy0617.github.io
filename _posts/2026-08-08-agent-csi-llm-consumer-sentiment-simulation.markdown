@@ -3,6 +3,10 @@ layout: post
 title:  "Agent CSI: Simulating Central Bank Consumer Surveys with 2,500 LLM Agents"
 date:   2026-08-08 11:00:00 +0900
 categories: ai economics
+# Research in progress: kept out of the home page, archive, feed and sitemap.
+# The page still builds, so the direct URL keeps working. Delete these two lines to list it again.
+draft: true
+sitemap: false
 description: "2,500개의 인구통계학적 층화 가구 에이전트로 한국은행 소비자동향지수(CSI) 24개 문항을 시뮬레이션하고 28개월 시계열로 검증한 연구."
 ---
 

@@ -82,21 +82,6 @@ layout: home
     </span>
   </a>
 
-  <a class="home-highlight highlight-purple" href="{{ '/ai/economics/2026/08/08/agent-csi-llm-consumer-sentiment-simulation.html' | relative_url }}">
-    <div class="home-highlight-top">
-      <span class="home-highlight-kicker">LLM Social Simulation</span>
-      <span class="home-highlight-pill">Simulation</span>
-    </div>
-    <span class="home-highlight-title">Agent CSI</span>
-    <span class="home-highlight-desc">2,500 stratified household agents reproducing the Bank of Korea Consumer Sentiment Index across 24 survey items.</span>
-    <span class="home-highlight-cta">
-      <span>Explore Simulation</span>
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="2" y1="8" x2="12" y2="8"></line>
-        <polyline points="8 4 12 8 8 12"></polyline>
-      </svg>
-    </span>
-  </a>
 
   <a class="home-highlight highlight-amber" href="{{ '/economics/software/2026/04/05/bok-x13-seasonal-adjustment-web-app.html' | relative_url }}">
     <div class="home-highlight-top">

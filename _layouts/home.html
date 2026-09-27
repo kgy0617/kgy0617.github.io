@@ -9,7 +9,8 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
+  {%- assign listed_posts = site.posts | where_exp: "post", "post.draft != true" -%}
+  {%- if listed_posts.size > 0 -%}
     <div class="home-posts-section">
       <div class="home-posts-header">
         <div class="home-posts-title-group">
@@ -17,7 +18,7 @@ layout: default
           <p class="home-posts-subheading">Articles on AI multi-agent architectures, economic simulations, and statistical platforms</p>
         </div>
         <a href="{{ '/archive/' | relative_url }}" class="home-posts-archive-link">
-          <span>View All Archive ({{ site.posts.size }})</span>
+          <span>View All Archive ({{ listed_posts.size }})</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="8" x2="13" y2="8"></line>
             <polyline points="9 4 13 8 9 12"></polyline>
@@ -26,7 +27,7 @@ layout: default
       </div>
 
       <div class="post-cards-list">
-        {%- for post in site.posts -%}
+        {%- for post in listed_posts -%}
         <article class="post-card-item">
           <div class="post-card-header">
             <div class="post-card-meta">

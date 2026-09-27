@@ -38,6 +38,11 @@ CI builds with the same `Gemfile.lock`, so what you see locally is what ships.
 `/ai/data/YYYY/MM/DD/slug.html`. Links from `portfolio.md` are hard-coded, so changing a
 post's date or categories means updating them there too.
 
+**Unlisted posts.** `draft: true` plus `sitemap: false` keeps a post off the home page, the
+archive, the feed and the sitemap, and adds `noindex`; the page still builds, so its direct
+URL keeps working. Hand-written links in `index.markdown`, `portfolio.md` and `ai-dev.md`
+are not filtered and have to be removed by hand.
+
 **Diagrams.** Fence a block as ` ```mermaid ` and `_includes/head.html` converts it at load
 time. Mermaid runs before KaTeX and diagram bodies are excluded from math rendering.
 

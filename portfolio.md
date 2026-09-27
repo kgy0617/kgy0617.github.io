@@ -47,33 +47,7 @@ hide_title: true
       </div>
     </div>
 
-    <!-- Project 2: Agent CSI -->
-    <div class="project-card purple">
-      <div class="project-header">
-        <h3 class="project-title">Agent CSI — LLM-Powered Consumer Sentiment Simulation</h3>
-        <span class="project-badge">Core Researcher & Engineer</span>
-      </div>
-      <p class="project-desc">
-        Simulating the Bank of Korea's official Consumer Survey Index (CSI) across 24 survey items using an agentic population of 2,500 stratified households, benchmarked against 28 months of empirical central bank releases.
-      </p>
-      <ul class="feature-list">
-        <li><strong>Stratified Agent Population</strong>: Sampled 2,500 Korean household personas from NVIDIA's Nemotron-Personas-Korea dataset (1M+ profiles) mirroring national demographic distributions.</li>
-        <li><strong>4-Stage Information Injection</strong>: Demographics → 11-attribute Personas → Self-referential past month memory → LLM daily economic news & quantitative indicator summaries (CPI, interest rates, NSI).</li>
-        <li><strong>Causal Graph Architecture</strong>: Implemented causal pathways (Shock → Mediator → Survey Question) with Shock z-scores to model macroeconomic stress transmission.</li>
-      </ul>
-      <div class="tech-tags">
-        <span class="tech-tag">LLM Simulation</span>
-        <span class="tech-tag">Nemotron-Personas</span>
-        <span class="tech-tag">Causal Inference</span>
-        <span class="tech-tag">Time-Series Alignment</span>
-        <span class="tech-tag">Central Banking</span>
-      </div>
-      <div class="project-links">
-        <a class="project-link" href="/ai/economics/2026/08/08/agent-csi-llm-consumer-sentiment-simulation.html">Read Deep-Dive Article →</a>
-      </div>
-    </div>
-
-    <!-- Project 3: FOMC Agent Council -->
+    <!-- Project 2: FOMC Agent Council -->
     <div class="project-card amber">
       <div class="project-header">
         <h3 class="project-title">FOMC Agent Council — Multi-Agent Monetary Policy Deliberation</h3>
@@ -101,7 +75,7 @@ hide_title: true
       </div>
     </div>
 
-    <!-- Project 4: News Analysis System -->
+    <!-- Project 3: News Analysis System -->
     <div class="project-card rose">
       <div class="project-header">
         <h3 class="project-title">Central Bank News Analysis System</h3>
@@ -130,7 +104,7 @@ hide_title: true
 
   <div class="project-grid">
 
-    <!-- Project 5: Global Economic Statistical MCP -->
+    <!-- Project 4: Global Economic Statistical MCP -->
     <div class="project-card amber">
       <div class="project-header">
         <h3 class="project-title">Global Economic Statistical MCP — Official Macro Statistics for LLMs</h3>
@@ -157,7 +131,7 @@ hide_title: true
       </div>
     </div>
 
-    <!-- Project 6: ECOS MCP -->
+    <!-- Project 5: ECOS MCP -->
     <div class="project-card emerald">
       <div class="project-header">
         <h3 class="project-title">ECOS MCP — Bank of Korea Statistics for AI Agents</h3>
@@ -193,7 +167,7 @@ hide_title: true
 
   <div class="project-grid">
 
-    <!-- Project 7: BOK-X-13 Web -->
+    <!-- Project 6: BOK-X-13 Web -->
     <div class="project-card emerald">
       <div class="project-header">
         <h3 class="project-title">BOK-X-13 Web — Seasonal Adjustment Web Platform</h3>
@@ -219,7 +193,7 @@ hide_title: true
       </div>
     </div>
 
-    <!-- Project 8: ECOS Modernization -->
+    <!-- Project 7: ECOS Modernization -->
     <div class="project-card">
       <div class="project-header">
         <h3 class="project-title">Economic Statistics System (ECOS) Modernization</h3>
@@ -246,7 +220,7 @@ hide_title: true
 
   <div class="project-grid">
 
-    <!-- Project 9: Data Production Value & Occupational Intensity -->
+    <!-- Project 8: Data Production Value & Occupational Intensity -->
     <div class="project-card purple">
       <div class="project-header">
         <h3 class="project-title">Measuring Korea’s Data Production Value and Occupational Data Intensity</h3>

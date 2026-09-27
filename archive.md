@@ -4,21 +4,25 @@ title: Archive
 permalink: /archive/
 ---
 
-{%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+{%- assign listed_posts = site.posts | where_exp: "post", "post.draft != true" -%}
+{%- assign years = listed_posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
 {%- assign cats = site.categories | sort -%}
 
 <p class="archive-intro">
-  {{ site.posts | size }} posts, newest first. Use the filters to narrow by topic.
+  {{ listed_posts | size }} posts, newest first. Use the filters to narrow by topic.
 </p>
 
 <div class="archive-filters" role="group" aria-label="Filter posts by category">
   <button type="button" class="archive-filter is-active" data-filter="all">
-    All <span class="archive-filter-count">{{ site.posts | size }}</span>
+    All <span class="archive-filter-count">{{ listed_posts | size }}</span>
   </button>
   {%- for category in cats -%}
+  {%- assign cat_posts = category[1] | where_exp: "post", "post.draft != true" -%}
+  {%- if cat_posts.size > 0 -%}
   <button type="button" class="archive-filter" data-filter="{{ category[0] | downcase }}" data-cat="{{ category[0] | downcase }}">
-    {{ category[0] }} <span class="archive-filter-count">{{ category[1] | size }}</span>
+    {{ category[0] }} <span class="archive-filter-count">{{ cat_posts | size }}</span>
   </button>
+  {%- endif -%}
   {%- endfor -%}
 </div>
 
