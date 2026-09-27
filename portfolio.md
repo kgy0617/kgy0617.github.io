@@ -304,7 +304,7 @@ hide_title: true
   <div class="skills-container">
     <div class="skill-block">
       <span class="skill-block-title">AI &amp; Multi-Agent</span>
-      <span class="skill-block-desc">Gemma-4 (26B), Qwen-3.6 (27B/35B), GPT-4o, Claude, Nemotron-Personas · LangGraph, MCP servers, custom hierarchical routers, multi-agent council protocols, prompt engineering</span>
+      <span class="skill-block-desc">Gemma-4 (26B), Qwen-3.6 (27B/35B), GPT-4o, Claude · LangGraph, MCP servers, custom hierarchical routers, multi-agent council protocols, prompt engineering</span>
     </div>
     <div class="skill-block">
       <span class="skill-block-title">Retrieval &amp; RAG</span>
@@ -320,7 +320,7 @@ hide_title: true
     </div>
     <div class="skill-block">
       <span class="skill-block-title">Econometrics &amp; Evaluation</span>
-      <span class="skill-block-desc">X-13ARIMA-SEATS, seasonal adjustment, causal inference, survey simulation, Stata, R, Kiwi, spaCy · Macro/Micro F1, Pearson correlation, MAE, bias decomposition</span>
+      <span class="skill-block-desc">X-13ARIMA-SEATS, seasonal adjustment, causal inference, Stata, R, Kiwi, spaCy · Macro/Micro F1, Pearson correlation, MAE, bias decomposition</span>
     </div>
   </div>
 
